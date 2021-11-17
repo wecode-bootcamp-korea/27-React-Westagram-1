@@ -1,3 +1,7 @@
+# 위스타그램 프로젝트
+
+강인웅, 이용우, 구유진, 김태영
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
