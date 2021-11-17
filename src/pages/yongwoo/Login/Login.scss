@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+$border-gray: 1px solid #dbdbdb;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body{
+    @include flex-center;
+    height: 100vh;
+}
+
+.login {
+@include flex-column-center;
+width: 350px;
+
+    .topWrap {
+        @include flex-column-center;
+        width: 348px;
+        border: $border-gray;
+        background-color: #ffffff;
+
+        .logo {
+        padding: 40px 0;
+        font-family: 'Lobster', cursive;
+        font-size: 45px;
+    }
+
+    input {
+        width: 266px;
+        padding: 10px 5px;
+        margin-top: 5px;
+        color: #8e8e8e;
+        background-color: #fafafa;
+        border: 1px solid rgba(var(--b6a,219,219,219),1);
+        border-radius: 1px;
+        font-size: 12px;
+
+        &::placeholder {
+            padding-left: 2px;
+            font-size: 12px;
+        }
+    }
+    
+    .loginButton {
+        width: 266px;
+        padding: 8px 0;
+        margin: 15px 0;
+        color: #ffffff;
+        background-color: #b2dffc;
+        border: none;
+        border-radius: 1px;
+        outline: none;
+        font-weight: bold;
+
+    }  
+    .meddleLine{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 266px;
+    color: #8e8e8e;
+    font-size: 13px;
+    font-weight: 600;
+
+    .line {
+    width: 103px;
+    height: 1px;
+    border-bottom: $border-gray;
+    }
+    }
+    
+    .facebookWrap p {
+        padding-top: 20px;
+        color: #385185;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .passwordLost {
+        padding: 20px 0;
+        color: #00376b;
+        font-size: 12px;
+    }
+   
+ }
+    .signUpWrap {
+        @include flex-center;
+        width: 348px;
+        height: 60px;
+        margin-top: 20px;
+        border: $border-gray;
+        background-color: #ffffff;
+        font-size: 14px;
+
+        .signUpBlue{
+        color: #0095f6;
+        background: none;
+        border: none;
+        font-weight: bold;
+        text-decoration: none;
+        cursor: pointer;
+        }
+    }
+
+    .downlodeCopyright {
+    margin: 20px 0;
+    font-size: 14px;
+    }
+
+    .storeWrap img {   
+    width: 136px;
+    }
+}
