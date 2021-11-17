@@ -1,410 +1,408 @@
 body {
-    padding-top: 40px;
+  padding-top: 40px;
 }
 $infomation-font-size: 11px;
 $infomation-font-color: #c7c7c7;
 $font-size: 14px;
 $border-gray: 1px solid rgb(219, 219, 219);
 
-@mixin flex-only-between{
-    display: flex;
-    justify-content: space-between;
+@mixin flex-only-between {
+  display: flex;
+  justify-content: space-between;
 }
 
 @mixin flex-colums {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 @mixin flex-space-between {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .main {
-    display: flex;
-    margin-top: 300px;
+  display: flex;
+  margin-top: 300px;
 }
 
 .navigation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #FFFFFF;
-    width: 100%;
-    height: 54px;
-    border-bottom:$border-gray ;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  width: 100%;
+  height: 54px;
+  border-bottom: $border-gray;
 
-    .navContainer {
+  .navContainer {
     @include flex-only-between;
     width: 935px;
 
-        .logoWrap {
-        display: flex;
-        align-items: center;
-        width: 150px;
+    .logoWrap {
+      display: flex;
+      align-items: center;
+      width: 150px;
 
-            .columnLine {
-            width: 1px;
-            height: 25px;
-            margin-left: 22px;
-            border-right: 1px solid rgb(14, 14, 14);
-            }
+      .columnLine {
+        width: 1px;
+        height: 25px;
+        margin-left: 22px;
+        border-right: 1px solid rgb(14, 14, 14);
+      }
 
-            .logo {
-                margin-left: 25px;
-                font-size: 22px;
-                font-family: 'Lobster', cursive;
-            }
+      .logo {
+        margin-left: 25px;
+        font-size: 22px;
+        font-family: 'Lobster', cursive;
+      }
 
-            img{
-            width: 25px;
-            cursor: pointer;
-            }
-        }
+      img {
+        width: 25px;
+        cursor: pointer;
+      }
     }
+  }
 
-        .search {
-        display: flex;
-        align-items: center;
-
-        input {
-        width: 215px;
-        height: 28px;
-        padding: 7px;
-        border: $border-gray;
-        border-radius: 3px;
-        background-color: #fafafa;
-        text-align: center;
-
-        &::placeholder {
-            color: $infomation-font-color;
-            background-image: url(../../asset/images/magnifier.png);
-            background-size: contain;
-            background-position: 35%;
-            background-repeat: no-repeat;
-            text-align: center;
-        }
-        }
-    }
-}
-
-.pictogramWrap {
-    @include flex-space-between;
-    width: 100px;
-
-    img{
-    width: 23px;
-    cursor: pointer;
-    }
-}
-
-.feedsContainer {
-    @include flex-only-between;
-    margin: 0 auto;
-    margin-right: 50px;
-
-    .feed {
-    @include flex-colums;
-    width: 614px;
-    margin-bottom: 30px;
-    border: 1px solid rgba(var(--b6a,219,219,219),1);
-
-        .photoWrap {
-        width: 612px;
-
-            img{
-            width: 100%;
-            }
-        }
-        .goodWrap {
-        display: flex;
-        align-items: center;
-        width: 570px;
-        margin: 0 auto;
-
-            p {
-            margin-left: 5px;
-            padding: 10px 0;
-            color: #262626;
-            font-size: $font-size;
-            font-weight: bold;
-            }
-    
-        .goodImg {
-        width: 20px;
-        height: 20px;
-        border-radius: 10px;
-        }
-    }
-
-        .textWrap {
-        @include flex-colums;
-        width: 570px;
-        margin: 0 auto;
-        font-size: 14px;
-
-        .text {
-        color: #00376b;
-        }
-
-        p {
-        margin-top:3px;
-        line-height: 20px;
-        }
-
-        .commentView {
-        color: #8e8e8e;
-        }
-
-        .time {
-        color: #8e8e8e;
-        font-size: 10px;
-        }
-
-        span{
-        font-size: $font-size;
-        }
-    }
-    }
-}
-
-.profileWrap {
-    @include flex-space-between;
-    width: 570px;
-    height: 60px;
-    margin: 0 auto;
-    padding: 20px 0;
-
-    .logoWrap{
+  .search {
     display: flex;
     align-items: center;
 
-        h2 {
-        margin-left: 5px;
-        font-size: $font-size;
-        }
+    input {
+      width: 215px;
+      height: 28px;
+      padding: 7px;
+      border: $border-gray;
+      border-radius: 3px;
+      background-color: #fafafa;
+      text-align: center;
 
-        i {
-       cursor: pointer;
-        }
-
-        img {
-        width: 32px;
-        height: 32px;
-        background-color: black;
-        border-radius: 16px;
-        }
+      &::placeholder {
+        color: $infomation-font-color;
+        background-image: url(../../../asset/images/magnifier.png);
+        background-size: contain;
+        background-position: 35%;
+        background-repeat: no-repeat;
+        text-align: center;
+      }
     }
+  }
+}
+
+.pictogramWrap {
+  @include flex-space-between;
+  width: 100px;
+
+  img {
+    width: 23px;
+    cursor: pointer;
+  }
+}
+
+.feedsContainer {
+  @include flex-only-between;
+  margin: 0 auto;
+  margin-right: 50px;
+
+  .feed {
+    @include flex-colums;
+    width: 614px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+
+    .photoWrap {
+      width: 612px;
+
+      img {
+        width: 100%;
+      }
+    }
+    .goodWrap {
+      display: flex;
+      align-items: center;
+      width: 570px;
+      margin: 0 auto;
+
+      p {
+        margin-left: 5px;
+        padding: 10px 0;
+        color: #262626;
+        font-size: $font-size;
+        font-weight: bold;
+      }
+
+      .goodImg {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+      }
+    }
+
+    .textWrap {
+      @include flex-colums;
+      width: 570px;
+      margin: 0 auto;
+      font-size: 14px;
+
+      .text {
+        color: #00376b;
+      }
+
+      p {
+        margin-top: 3px;
+        line-height: 20px;
+      }
+
+      .commentView {
+        color: #8e8e8e;
+      }
+
+      .time {
+        color: #8e8e8e;
+        font-size: 10px;
+      }
+
+      span {
+        font-size: $font-size;
+      }
+    }
+  }
+}
+
+.profileWrap {
+  @include flex-space-between;
+  width: 570px;
+  height: 60px;
+  margin: 0 auto;
+  padding: 20px 0;
+
+  .logoWrap {
+    display: flex;
+    align-items: center;
+
+    h2 {
+      margin-left: 5px;
+      font-size: $font-size;
+    }
+
+    i {
+      cursor: pointer;
+    }
+
+    img {
+      width: 32px;
+      height: 32px;
+      background-color: black;
+      border-radius: 16px;
+    }
+  }
 }
 
 .feedsPictogram {
-    @include flex-space-between;
-    width: 570px;
-    height: 40px;
-    margin: 0 auto;
-    padding-top: 10px;
+  @include flex-space-between;
+  width: 570px;
+  height: 40px;
+  margin: 0 auto;
+  padding-top: 10px;
 
-    .feedsPictogramLeft {
+  .feedsPictogramLeft {
     display: flex;
     justify-content: space-between;
     width: 100px;
 
-        img {
-        width: 24px;
-        cursor: pointer;
-        }
+    img {
+      width: 24px;
+      cursor: pointer;
     }
-    .saveIcon {
+  }
+  .saveIcon {
     width: 24px;
     cursor: pointer;
-    }
+  }
 }
-
-
 
 i.fas.fa-heart.redHeart {
-    display: inline-block;
+  display: inline-block;
 }
 i.fas.fa-heart.blackHeart {
-    display: inline-block;
+  display: inline-block;
 }
 
 .commentContainer {
-    display: flex;
-    width: 100%;
-    height: 50px;
-    margin-top: 10px;
-    border-top: $border-gray;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  border-top: $border-gray;
 
-    .commentWrap {
+  .commentWrap {
     @include flex-space-between;
     width: 570px;
     margin: 0 auto;
 
-        input {
-        width: 500px;
-        border: none;
-        background: none;
-        outline: none;
-        }
-
-        button {
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: #BFE0FD;
-        }
+    input {
+      width: 500px;
+      border: none;
+      background: none;
+      outline: none;
     }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #bfe0fd;
+    }
+  }
 }
 
 .comment {
-    @include flex-space-between;
+  @include flex-space-between;
 
-    .commentNameBold {
+  .commentNameBold {
     font-weight: bold;
-    }
+  }
 
-    span.commentText {
+  span.commentText {
     font-weight: normal;
-    }
+  }
 
-    .heart{
+  .heart {
     width: 15px;
     cursor: pointer;
-    }
+  }
 
-    .heartColor{
+  .heartColor {
     display: none;
     width: 15px;
     cursor: pointer;
-    }
+  }
 }
 
 .commentStart {
-    i {
-       font-size: 15px;
+  i {
+    font-size: 15px;
 
-        .fa-trash-alt {
-        display: none;
-        color: gray;
-        cursor: pointer;
-        }
-
-        .fa-heart {
-            display: none;
-            cursor: pointer;
-        }
-
-        .colorHeart {
-            display: none;
-            color: #f44336;
-            cursor: pointer;
-        }
+    .fa-trash-alt {
+      display: none;
+      color: gray;
+      cursor: pointer;
     }
+
+    .fa-heart {
+      display: none;
+      cursor: pointer;
+    }
+
+    .colorHeart {
+      display: none;
+      color: #f44336;
+      cursor: pointer;
+    }
+  }
 }
 
 .recommendContainer {
-    .mainRight {
+  .mainRight {
     width: 293px;
     height: 460px;
 
     .myInfoWrap {
-    @include flex-space-between;
+      @include flex-space-between;
 
-        .myInfoPhotoWrap {
+      .myInfoPhotoWrap {
         @include flex-only-between;
 
-            img {
-            width: 56px;
-            height: 56px;
-            border-radius: 28px;
-            background-color: black;
-            }
-
-            .myInfo {
-            @include flex-colums;
-            justify-content: center;
-            margin-left: 18px;
-
-                h2 {
-                font-size: $font-size;
-                }
-
-                p {
-                margin-top: 2px;
-                color: #8e8e8e;
-                font-size: $font-size;
-                }
-            }
+        img {
+          width: 56px;
+          height: 56px;
+          border-radius: 28px;
+          background-color: black;
         }
-        
-    .infoBlue {
-    color: #0095f6;
-    font-size: 12px;
-    font-weight: bold;
-    }    
+
+        .myInfo {
+          @include flex-colums;
+          justify-content: center;
+          margin-left: 18px;
+
+          h2 {
+            font-size: $font-size;
+          }
+
+          p {
+            margin-top: 2px;
+            color: #8e8e8e;
+            font-size: $font-size;
+          }
+        }
+      }
+
+      .infoBlue {
+        color: #0095f6;
+        font-size: 12px;
+        font-weight: bold;
+      }
     }
 
     .recommendTitle {
-        @include flex-only-between;
-        margin-top: 30px;
+      @include flex-only-between;
+      margin-top: 30px;
 
-        .grayColor {
+      .grayColor {
         color: #8e8e8e;
         font-weight: bold;
         font-size: $font-size;
-        }
+      }
 
-        .blackColor {
+      .blackColor {
         color: #262626;
         font-size: 12px;
         font-weight: 600;
-        }
+      }
     }
-}
+  }
 
-    .recommendWrap {
+  .recommendWrap {
     @include flex-space-between;
     margin-top: 16px;
 
     .recommend {
-        display: flex;
+      display: flex;
 
-        .recommendPhoto {
+      .recommendPhoto {
         width: 32px;
         height: 32px;
         border: $border-gray;
         border-radius: 16px;
-        }
+      }
     }
 
     .recommendText {
-    margin-left: 13px;
+      margin-left: 13px;
 
-        h4 {
+      h4 {
         color: #262626;
         font-size: $font-size;
-        }
+      }
 
-        p {
+      p {
         margin-top: 3px;
         color: #8e8e8e;
         font-size: 12px;
-        }
+      }
     }
     .follow {
-    color: #0095f6;
-    font-size: 12px;
-    font-weight: bold;
+      color: #0095f6;
+      font-size: 12px;
+      font-weight: bold;
     }
-}
+  }
 }
 
 .infomation {
-    .infomatioinList {
+  .infomatioinList {
     display: flex;
     align-items: center;
     justify-content: start;
@@ -414,16 +412,16 @@ i.fas.fa-heart.blackHeart {
     font-size: $infomation-font-size;
 
     li {
-    padding-right: 8px;
-    line-height: 17px;
-    list-style: none;
+      padding-right: 8px;
+      line-height: 17px;
+      list-style: none;
     }
-}
+  }
 
-    p {
+  p {
     margin-top: 25px;
     color: $infomation-font-color;
     font-size: $infomation-font-size;
-    font-weight: 400; 
-    }
+    font-weight: 400;
+  }
 }

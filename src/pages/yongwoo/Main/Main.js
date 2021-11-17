@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function LogoWrap(params) {
   return (
@@ -7,7 +7,7 @@ function LogoWrap(params) {
         src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png"
         alt="로고"
       />
-      <div className="columnLine"></div>
+      <div className="columnLine" />
       <h1 className="logo">Westagram</h1>
     </article>
   );
@@ -42,15 +42,13 @@ function PictogramWrap() {
 
 function Navigation() {
   return (
-    <>
-      <nav className="navigation">
-        <div className="navContainer">
-          <LogoWrap />
-          <Search />
-          <PictogramWrap />
-        </div>
-      </nav>
-    </>
+    <nav className="navigation">
+      <div className="navContainer">
+        <LogoWrap />
+        <Search />
+        <PictogramWrap />
+      </div>
+    </nav>
   );
 }
 
@@ -58,10 +56,10 @@ function ProfileWrap(params) {
   return (
     <div className="profileWrap">
       <div className="logoWrap">
-        <img src="/images/profile.jpeg" alt="logo" />
+        <img src="images/yongwoo/heart.png" alt="logo" />
         <h2>94_yongyong_lee</h2>
       </div>
-      <i className="fas fa-ellipsis-h"></i>
+      <i className="fas fa-ellipsis-h" />
     </div>
   );
 }
@@ -70,13 +68,13 @@ function FeedsPictogram() {
   return (
     <div className="feedsPictogram">
       <div className="feedsPictogramLeft">
-        <img src="/images/heart.png" alt="하트" />
+        <img src="images/yongwoo/heart.png" alt="하트" />
         <img
           className="speachBubble"
-          src="/images/bubble-chat.png"
+          src="images/yongwoo/bubble-chat.png"
           alt="speachBubble"
         />
-        <img src="/images/share.png" alt="share" />
+        <img src="images/yongwoo/share.png" alt="share" />
       </div>
       <img
         className="saveIcon"
@@ -101,7 +99,7 @@ function CommentContainer() {
 function PhotoWrap(params) {
   return (
     <div className="photoWrap">
-      <img src="/images/instagram_feed.jpeg" alt="mainPhoto" />
+      <img src="images/yongwoo/instagram_feed.jpeg" alt="mainPhoto" />
     </div>
   );
 }
@@ -109,7 +107,11 @@ function PhotoWrap(params) {
 function GoodWrap() {
   return (
     <div className="goodWrap">
-      <img className="goodImg" src="/images/goodImage.jpeg" alt="" />
+      <img
+        className="goodImg"
+        src="images/yongwoo/goodImage.jpeg"
+        alt="좋아요"
+      />
       <p>sung_sae_h2 님 외 24명이 좋아합니다.</p>
     </div>
   );
@@ -126,13 +128,13 @@ function TextWrap() {
           jeffkim01
           <span className="commentText"> 진짜 세상 부럽다... 저도 동숲...</span>
         </p>
-        <i className="fas fa-heart textolorHeart"></i>
+        <i className="fas fa-heart textolorHeart" />
       </div>
-      <div className="commentStart">
-        <i className="far fa-trash-alt"></i>
-        <i className="far fa-heart"></i>
-        <i className="fas fa-heart colorHeart"></i>
-      </div>
+      {/* <div className="commentStart">
+        <i className="far fa-trash-alt" />
+        <i className="far fa-heart" />
+        <i className="fas fa-heart colorHeart" />
+      </div> */}
       <p className="commentView">54분전</p>
     </div>
   );
@@ -158,7 +160,7 @@ function RecommendContainer() {
       <article className="mainRight">
         <div className="myInfoWrap">
           <div className="myInfoPhotoWrap">
-            <img src="/images/profile.jpeg" alt="프로필" />
+            <img src="images/yongwoo/profile.jpeg" alt="프로필" />
             <div className="myInfo">
               <h2>94_yongyong_lee</h2>
               <p>이용우</p>
@@ -174,7 +176,7 @@ function RecommendContainer() {
           <div className="recommend">
             <img
               className="recommendPhoto"
-              src="/images/recommend_01.jpeg"
+              src="images/yongwoo/recommend_01.jpeg"
               alt="추천1"
             />
             <div className="recommendText">
@@ -189,7 +191,7 @@ function RecommendContainer() {
           <div className="recommend">
             <img
               className="recommendPhoto"
-              src="/images/recommend_02.jpeg"
+              src="images/yongwoo/recommend_02.jpeg"
               alt="추천2"
             />
             <div className="recommendText">
@@ -204,7 +206,7 @@ function RecommendContainer() {
           <div className="recommend">
             <img
               className="recommendPhoto"
-              src="/images/recommend_03.jpeg"
+              src="images/yongwoo/recommend_03.jpeg"
               alt="추천3"
             />
             <div className="recommendText">
@@ -219,7 +221,7 @@ function RecommendContainer() {
           <div className="recommend">
             <img
               className="recommendPhoto"
-              src="/images/recommend_04.jpeg"
+              src="images/yongwoo/recommend_04.jpeg"
               alt="추천4"
             />
             <div className="recommendText">
@@ -234,7 +236,7 @@ function RecommendContainer() {
           <div className="recommend">
             <img
               className="recommendPhoto"
-              src="/images/recommend_05.jpeg"
+              src="images/yongwoo/recommend_05.jpeg"
               alt="추천5"
             />
             <div className="recommendText">

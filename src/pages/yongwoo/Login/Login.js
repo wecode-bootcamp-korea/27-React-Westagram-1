@@ -1,5 +1,5 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Logo() {
   return <h1 className="logo">Westagram</h1>;
@@ -22,8 +22,8 @@ function SignUpWrap() {
   return (
     <article className="signUpWrap">
       <p>
-        계정이 없으신가요?{" "}
-        <Link to="/Main">
+        계정이 없으신가요?{' '}
+        <Link to="/main-yongwoo">
           <button href="" className="signUpBlue">
             가입하기
           </button>
@@ -37,7 +37,7 @@ function LoginButton() {
   const navigate = useNavigate();
 
   const goToMain = () => {
-    navigate("/Main");
+    navigate('/main-yongwoo');
   };
   return (
     <button className="loginButton" onClick={goToMain}>
@@ -48,45 +48,41 @@ function LoginButton() {
 
 function StoreWrap() {
   return (
-    <>
-      <article className="storeWrap">
-        <img
-          src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_korean-ko.png/4a5c9d62d51b.png"
-          alt="appStore"
-        />
-        <img
-          src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_korean-ko.png/f155b664a93b.png"
-          alt="googlePlay"
-        />
-      </article>
-    </>
+    <article className="storeWrap">
+      <img
+        src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_korean-ko.png/4a5c9d62d51b.png"
+        alt="appStore"
+      />
+      <img
+        src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_korean-ko.png/f155b664a93b.png"
+        alt="googlePlay"
+      />
+    </article>
   );
 }
 
 function LoginYongwoo() {
   return (
-    <>
-      <section className="login">
-        <article className="topWrap">
-          <Logo />
-          <UserInfo />
-          <LoginButton />
-          <div className="meddleLine">
-            <div className="line"></div>
-            <p>또는</p>
-            <div className="line"></div>
-          </div>
-          <div className="facebookWrap">
-            <p>Facebook으로 로그인</p>
-          </div>
-          <p className="passwordLost">비밀번호를 잊으셨나요?</p>
-        </article>
-        <SignUpWrap />
-        <p className="downlodeCopyright">앱을 다운로드하세요.</p>
-        <StoreWrap />
-      </section>
-    </>
+    <section className="login">
+      <article className="topWrap">
+        <Logo />
+        <UserInfo />
+        <LoginButton />
+        <div className="meddleLine">
+          <div className="line" />
+          <p>또는</p>
+          <div className="line" />
+        </div>
+        <div className="facebookWrap">
+          <p>Facebook으로 로그인</p>
+        </div>
+        <p className="passwordLost">비밀번호를 잊으셨나요?</p>
+      </article>
+      <SignUpWrap />
+      <p className="downlodeCopyright">앱을 다운로드하세요.</p>
+      <StoreWrap />
+    </section>
   );
 }
 
-export default LoginYongwoo
+export default LoginYongwoo;

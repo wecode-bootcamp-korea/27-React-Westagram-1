@@ -1,6 +1,4 @@
 function LoginInwoong() {
-  return (
-    <div>하이</div>
-  )
+  return <div>하이</div>;
 }
-export default LoginInwoong
+export default LoginInwoong;

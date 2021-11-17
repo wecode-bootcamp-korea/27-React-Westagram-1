@@ -1,8 +1,8 @@
-$color-outline: #DBDBDB;
+$color-outline: #dbdbdb;
 $border-radius: 5px;
 
 @mixin logoText($logoText: 50px) {
-  font-family: "Lobster", cursive;
+  font-family: 'Lobster', cursive;
   font-size: $logText;
 }
 
@@ -17,4 +17,3 @@ $border-radius: 5px;
   justify-content: space-between;
   align-items: center;
 }
-
