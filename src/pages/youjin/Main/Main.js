@@ -1,6 +1,22 @@
+import React from 'react';
+import './Main.scss';
+
+import MainRight from './MainRight/MainRight';
+import Nav from '../../../components/Nav/Nav';
+import Feeds from '../Main/Feeds/Feeds';
+
 function MainYoujin() {
   return (
-    <div>하이</div>
-  )
+    <div className="MainYoujin">
+      <header>
+        <Nav />
+      </header>
+      <main>
+        <Feeds />
+        <MainRight />
+      </main>
+    </div>
+  );
 }
-export default MainYoujin
+
+export default MainYoujin;

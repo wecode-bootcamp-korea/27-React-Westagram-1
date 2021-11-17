@@ -1,0 +1,145 @@
+@import '../../../../styles/variables.scss';
+
+.articleBox {
+  width: 42%;
+  margin: 120px 0 150px 220px;
+  border: 1px solid $color-outline;
+  .profileBox {
+    @include flexBetween;
+    border-bottom: 1px solid $color-outline;
+    background-color: #fff;
+    .profileAndId {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      img {
+        width: 8%;
+        border-radius: 50%;
+        margin: 10px;
+      }
+      .myId {
+        font-size: 20px;
+      }
+    }
+    .fas {
+      margin-right: 15px;
+    }
+  }
+  .imageBox {
+    img {
+      width: 100%;
+    }
+  }
+  .estimateBox {
+    @include flexBetween;
+    width: 100%;
+    font-size: 25px;
+    padding: 5px 10px;
+    .commentBtnBar {
+      @include flexBetween;
+      width: 20%;
+      a {
+        margin: 5px;
+        font-size: 20px;
+        text-decoration: none;
+        .likeBtn::after {
+          font-family: 'FontAwesome';
+          content: '\f004';
+          color: #000;
+        }
+        .commentBtn::after {
+          font-family: 'FontAwesome';
+          content: '\f075';
+          color: #000;
+        }
+        .shareBtn::after {
+          font-family: 'FontAwesome';
+          content: '\f1d8';
+          color: #000;
+        }
+        .bookmarkBtn::after {
+          margin-right: 10px;
+          font-family: 'FontAwesome';
+          content: '\f02e';
+          color: #000;
+        }
+        .likeBtn:hover::after {
+          font-family: 'FontAwesome';
+          content: '\f004';
+          font-size: 20px;
+          color: #8e8e8e;
+        }
+        .commentBtn:hover::after {
+          font-family: 'FontAwesome';
+          content: '\f075';
+          color: #8e8e8e;
+        }
+        .shareBtn:hover::after {
+          font-family: 'FontAwesome';
+          content: '\f1d8';
+          color: #8e8e8e;
+        }
+      }
+    }
+    .bookmarkBtn:hover::after {
+      margin-right: 10px;
+      font-family: 'FontAwesome';
+      content: '\f02e';
+      color: #8e8e8e;
+    }
+  }
+  .howManyLikes {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin: 5px 10px;
+    img {
+      width: 5%;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+  .commentBox {
+    width: 100%;
+    ul {
+      list-style: none;
+      text-align: left;
+      li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 5px 10px;
+        a {
+          text-decoration: none;
+          color: #000;
+          .writeId {
+            font-weight: 600;
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  .beforeFewMin {
+    padding: 5px 10px;
+  }
+  .addComment {
+    @include flexBetween;
+    background-color: #fff;
+    input {
+      width: 100%;
+      border: none;
+      padding: 10px 10px;
+      outline: none;
+    }
+    #postBtn {
+      width: 10%;
+      border: none;
+      background-color: #fff;
+      color: #c5e1fa;
+      font-weight: 600;
+      padding: 5px 10px;
+    }
+  }
+}
