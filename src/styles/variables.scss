@@ -1,0 +1,20 @@
+$color-outline: #DBDBDB;
+$border-radius: 5px;
+
+@mixin logoText($logoText: 50px) {
+  font-family: "Lobster", cursive;
+  font-size: $logText;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
