@@ -62,7 +62,7 @@
   }
   .pictogramWrap {
     @include flexBetween;
-    // width: 100px;
+    width: 100px;
 
     img {
       width: 23px;

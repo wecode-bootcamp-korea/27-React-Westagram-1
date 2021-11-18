@@ -1,8 +1,8 @@
 body {
   padding-top: 40px;
 }
-$infomation-font-size: 11px;
-$infomation-font-color: #c7c7c7;
+$information-font-size: 11px;
+$information-font-color: #c7c7c7;
 $font-size: 14px;
 $border-gray: 1px solid rgb(219, 219, 219);
 
@@ -298,15 +298,15 @@ i.fas.fa-heart.blackHeart {
   }
 }
 
-.infomation {
-  .infomatioinList {
+.information {
+  .informatioinList {
     display: flex;
     align-items: center;
     justify-content: start;
     flex-wrap: wrap;
     margin-top: 37px;
-    color: $infomation-font-color;
-    font-size: $infomation-font-size;
+    color: $information-font-color;
+    font-size: $information-font-size;
 
     li {
       padding-right: 8px;
@@ -317,8 +317,8 @@ i.fas.fa-heart.blackHeart {
 
   p {
     margin-top: 25px;
-    color: $infomation-font-color;
-    font-size: $infomation-font-size;
+    color: $information-font-color;
+    font-size: $information-font-size;
     font-weight: 400;
   }
 }

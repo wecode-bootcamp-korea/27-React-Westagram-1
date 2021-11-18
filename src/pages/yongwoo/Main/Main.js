@@ -175,8 +175,8 @@ function RecommendContainer() {
           <div className="follow">팔로우</div>
         </div>
 
-        <div className="infomation">
-          <ul className="infomatioinList">
+        <div className="information">
+          <ul className="informatioinList">
             <li>소개.</li>
             <li>도움말.</li>
             <li>홍보센터.</li>
