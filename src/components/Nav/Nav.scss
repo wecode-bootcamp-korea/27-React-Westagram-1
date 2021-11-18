@@ -1,0 +1,72 @@
+@import '../../styles/variables.scss';
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  width: 100%;
+  padding: 15px 0;
+  border-bottom: 1px solid rgb(219, 219, 219);
+
+  .navContainer {
+    @include flexBetween;
+    width: 935px;
+
+    .logoWrap {
+      display: flex;
+      align-items: center;
+      width: 150px;
+
+      .columnLine {
+        width: 1px;
+        height: 25px;
+        margin-left: 22px;
+        border-right: 1px solid rgb(14, 14, 14);
+      }
+
+      .logo {
+        @include logoText($logoText: 22px);
+        margin-left: 25px;
+      }
+
+      img {
+        width: 25px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+
+    input {
+      width: 215px;
+      padding: 5px 0;
+      border: 1px solid rgb(219, 219, 219);
+      border-radius: $border-radius;
+      background-color: #fafafa;
+      text-align: center;
+
+      &::placeholder {
+        color: #c7c7c7;
+        background-size: contain;
+        background-position: 35%;
+        background-repeat: no-repeat;
+        text-align: center;
+      }
+    }
+  }
+  .pictogramWrap {
+    @include flexBetween;
+    width: 100px;
+
+    img {
+      width: 23px;
+      cursor: pointer;
+    }
+  }
+}
