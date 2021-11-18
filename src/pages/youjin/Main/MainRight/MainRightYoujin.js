@@ -1,12 +1,12 @@
 import React from 'react';
-import './MainRight.scss';
+import './MainRightYoujin.scss';
 
-function MainRight() {
+function MainRightYoujin() {
   return (
-    <div className="mainRight">
+    <div className="mainRightYoujin">
       <div className="sideContainer">
         <div className="showMyId">
-          <img src="images/youjin/myphoto.jpg" alt="" />
+          <img src="images/youjin/myphoto.jpg" alt="아이디사진" />
           <div>
             <h1>sodalite.1204</h1>
             <h2>구유진입니다</h2>
@@ -24,7 +24,7 @@ function MainRight() {
               <ul>
                 <li>
                   <span className="storyAndId">
-                    <img src="images/youjin/myphoto.jpg" alt="" />
+                    <img src="images/youjin/myphoto.jpg" alt="아이디사진" />
                   </span>
                   <span className="storyAndId">
                     <p id="userId">sodalite.1204</p>
@@ -47,7 +47,7 @@ function MainRight() {
               <ul>
                 <li>
                   <span className="photoAndId">
-                    <img src="images/youjin/myphoto.jpg" alt="" />
+                    <img src="images/youjin/myphoto.jpg" alt="아이디사진" />
                   </span>
                   <span className="photoAndId">
                     <p id="addFriendId">sodalite.1204</p>
@@ -66,4 +66,4 @@ function MainRight() {
   );
 }
 
-export default MainRight;
+export default MainRightYoujin;

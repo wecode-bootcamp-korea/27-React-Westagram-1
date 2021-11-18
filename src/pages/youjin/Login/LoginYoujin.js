@@ -1,6 +1,6 @@
 import React from 'react';
-import './Login.scss';
-import LoginForm from './LoginForm/LoginForm';
+import './LoginYoujin.scss';
+import LoginForm from './LoginForm/LoginFormYoujin';
 import { Link } from 'react-router-dom';
 
 function LoginYoujin() {

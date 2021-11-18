@@ -13,8 +13,8 @@ import LoginYongwoo from './pages/yongwoo/Login/Login';
 import MainYongwoo from './pages/yongwoo/Main/Main';
 
 // 유진's 컴포넌트
-import LoginYoujin from './pages/youjin/Login/Login';
-import MainYoujin from './pages/youjin/Main/Main';
+import LoginYoujin from './pages/youjin/Login/LoginYoujin';
+import MainYoujin from './pages/youjin/Main/MainYoujin';
 
 function Router() {
   return (

@@ -1,8 +1,8 @@
 @import '../../../../styles/variables.scss';
 .feedsYoujin {
   .articleBox {
-    width: 42%;
-    margin: 120px 0 150px 220px;
+    width: 40%;
+    margin: 80px 0 150px 250px;
     border: 1px solid $color-outline;
     .profileBox {
       @include flexBetween;
@@ -38,54 +38,15 @@
       .commentBtnBar {
         @include flexBetween;
         width: 20%;
-        a {
-          margin: 5px;
-          font-size: 20px;
-          text-decoration: none;
-          .likeBtn::after {
-            font-family: 'FontAwesome';
-            content: '\f004';
-            color: #000;
-          }
-          .commentBtn::after {
-            font-family: 'FontAwesome';
-            content: '\f075';
-            color: #000;
-          }
-          .shareBtn::after {
-            font-family: 'FontAwesome';
-            content: '\f1d8';
-            color: #000;
-          }
-          .bookmarkBtn::after {
-            margin-right: 10px;
-            font-family: 'FontAwesome';
-            content: '\f02e';
-            color: #000;
-          }
-          .likeBtn:hover::after {
-            font-family: 'FontAwesome';
-            content: '\f004';
-            font-size: 20px;
-            color: #8e8e8e;
-          }
-          .commentBtn:hover::after {
-            font-family: 'FontAwesome';
-            content: '\f075';
-            color: #8e8e8e;
-          }
-          .shareBtn:hover::after {
-            font-family: 'FontAwesome';
-            content: '\f1d8';
-            color: #8e8e8e;
+        i {
+          .far {
+            .fa {
+              margin: 5px;
+              font-size: 20px;
+              text-decoration: none;
+            }
           }
         }
-      }
-      .bookmarkBtn:hover::after {
-        margin-right: 10px;
-        font-family: 'FontAwesome';
-        content: '\f02e';
-        color: #8e8e8e;
       }
     }
     .howManyLikes {

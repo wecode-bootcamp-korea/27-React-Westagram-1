@@ -1,5 +1,5 @@
 import React from 'react';
-import LoginBtn from './LoginBtn';
+import LoginBtnYoujin from './LoginBtnYoujin';
 import './LoginFormYoujin.scss';
 
 function LoginFormYoujin() {
@@ -12,7 +12,7 @@ function LoginFormYoujin() {
           placeholder="전화번호, 사용자 이름 또는 이메일"
         />
         <input id="password1" type="password" placeholder="비밀번호" />
-        <LoginBtn />
+        <LoginBtnYoujin />
       </form>
     </div>
   );

@@ -1,9 +1,9 @@
 import React from 'react';
-import './Main.scss';
+import './MainYoujin.scss';
 
-import MainRight from './MainRight/MainRight';
+import MainRightYoujin from './MainRight/MainRightYoujin';
 import Nav from '../../../components/Nav/Nav';
-import Feeds from '../Main/Feeds/Feeds';
+import FeedsYoujin from './Feeds/FeedsYoujin';
 
 function MainYoujin() {
   return (
@@ -12,8 +12,8 @@ function MainYoujin() {
         <Nav />
       </header>
       <main>
-        <Feeds />
-        <MainRight />
+        <FeedsYoujin />
+        <MainRightYoujin />
       </main>
     </div>
   );

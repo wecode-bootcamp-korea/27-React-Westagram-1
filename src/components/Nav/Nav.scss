@@ -1,42 +1,72 @@
 @import '../../styles/variables.scss';
+
 .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
   width: 100%;
-  nav {
+  padding: 15px 0;
+  border-bottom: 1px solid rgb(219, 219, 219);
+
+  .navContainer {
     @include flexBetween;
-    width: 70%;
-    margin: 10px auto;
-    .logoBar {
-      @include flexCenter;
-      img {
-        width: 30px;
-        margin-right: 10px;
+    width: 935px;
+
+    .logoWrap {
+      display: flex;
+      align-items: center;
+      width: 150px;
+
+      .columnLine {
+        width: 1px;
+        height: 25px;
+        margin-left: 22px;
+        border-right: 1px solid rgb(14, 14, 14);
       }
-      .logoName {
-        padding-left: 10px;
-        border-left: 1px solid #000;
-        text-decoration-line: none;
-        @include logoText($logoText: 30px);
-        color: #000;
+
+      .logo {
+        @include logoText($logoText: 22px);
+        margin-left: 25px;
+      }
+
+      img {
+        width: 25px;
+        cursor: pointer;
       }
     }
-    .searchBar {
-      position: relative;
-      padding: 0 auto;
-      input {
-        padding: 5px 20px;
-        outline: none;
-        border: 1px solid $color-outline;
-        border-radius: 3px;
-        background-color: #fafafa;
-        font-size: 15px;
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+
+    input {
+      width: 215px;
+      padding: 5px 0;
+      border: 1px solid rgb(219, 219, 219);
+      border-radius: $border-radius;
+      background-color: #fafafa;
+      text-align: center;
+
+      &::placeholder {
+        color: #c7c7c7;
+        background-size: contain;
+        background-position: 35%;
+        background-repeat: no-repeat;
+        text-align: center;
       }
     }
-    .naviBar {
-      @include flexCenter;
-      img {
-        width: 30px;
-        margin: 0 10px;
-      }
+  }
+  .pictogramWrap {
+    @include flexBetween;
+    width: 100px;
+
+    img {
+      width: 23px;
+      cursor: pointer;
     }
   }
 }

@@ -1,27 +1,38 @@
 import React from 'react';
 import './Nav.scss';
-import { Link } from 'react-router-dom';
 
 function Nav() {
   return (
-    <div class="nav">
-      <nav>
-        <div className="logoBar">
-          <img src="images/youjin/logo.png" alt="로고" />
-          <Link to="/" class="logoName">
-            westagram
-          </Link>
-        </div>
-        <div className="searchBar">
+    <nav className="nav">
+      <div className="navContainer">
+        <article className="logoWrap">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png"
+            alt="로고"
+          />
+          <div className="columnLine" />
+          <h1 className="logo">Westagram</h1>
+        </article>
+        <article className="search">
           <input type="text" placeholder="검색" />
-        </div>
-        <div className="naviBar">
-          <img src="images/youjin/explore.png" alt="나침반" />
-          <img src="images/youjin/heart.png" alt="좋아요" />
-          <img src="images/youjin/profile.png" alt="프로필" />
-        </div>
-      </nav>
-    </div>
+        </article>
+        <article className="pictogramWrap">
+          <img
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+            alt="탐색"
+          />
+          <img
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+            alt="하트"
+          />
+          <img
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+            alt="프로필"
+          />
+        </article>
+      </div>
+    </nav>
   );
 }
+
 export default Nav;
