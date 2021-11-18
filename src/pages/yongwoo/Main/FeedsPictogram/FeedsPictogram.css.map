@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,eAAe,CAAC;ECad,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,WAAW,EAAE,MAAM;EDbnB,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,MAAM;EACd,WAAW,EAAE,IAAI;CAgBlB;;AArBD,AAOE,eAPa,CAOb,mBAAmB,CAAC;EAClB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,KAAK,EAAE,KAAK;CAMb;;AAhBH,AAYI,eAZW,CAOb,mBAAmB,CAKjB,GAAG,CAAC;EACF,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,OAAO;CAChB;;AAfL,AAiBE,eAjBa,CAiBb,SAAS,CAAC;EACR,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,OAAO;CAChB",
+    "sources": [
+        "FeedsPictogram.scss",
+        "../../../../styles/variables.scss"
+    ],
+    "names": [],
+    "file": "FeedsPictogram.css"
+}

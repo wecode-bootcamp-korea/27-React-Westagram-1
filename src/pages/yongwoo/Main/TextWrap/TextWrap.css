@@ -1,0 +1,35 @@
+.textWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 570px;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.textWrap .text {
+  color: #00376b;
+}
+
+.textWrap p {
+  margin-top: 3px;
+  line-height: 20px;
+}
+
+.textWrap .commentView {
+  color: #8e8e8e;
+}
+
+.textWrap .time {
+  color: #8e8e8e;
+  font-size: 10px;
+}
+
+.textWrap span {
+  font-size: 14px;
+}
+/*# sourceMappingURL=TextWrap.css.map */

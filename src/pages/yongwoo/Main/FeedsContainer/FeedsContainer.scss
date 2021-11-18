@@ -1,0 +1,42 @@
+.feedsContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-right: 50px;
+
+  .feed {
+    display: flex;
+    flex-direction: column;
+    width: 614px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+
+    .photoWrap {
+      width: 612px;
+
+      img {
+        width: 100%;
+      }
+    }
+    .goodWrap {
+      display: flex;
+      align-items: center;
+      width: 570px;
+      margin: 0 auto;
+
+      p {
+        margin-left: 5px;
+        padding: 10px 0;
+        color: #262626;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .goodImg {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+      }
+    }
+  }
+}

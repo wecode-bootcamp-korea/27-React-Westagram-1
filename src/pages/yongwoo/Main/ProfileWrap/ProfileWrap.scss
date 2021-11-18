@@ -1,0 +1,30 @@
+@import '../../../../styles/variables.scss';
+
+.profileWrap {
+  @include flexBetween;
+  width: 570px;
+  height: 60px;
+  margin: 0 auto;
+  padding: 20px 0;
+
+  .logoWrap {
+    display: flex;
+    align-items: center;
+
+    h2 {
+      margin-left: 5px;
+      font-size: 14px;
+    }
+
+    i {
+      cursor: pointer;
+    }
+
+    img {
+      width: 32px;
+      height: 32px;
+      background-color: black;
+      border-radius: 16px;
+    }
+  }
+}
