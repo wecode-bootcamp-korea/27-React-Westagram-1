@@ -1,62 +1,13 @@
 import React from 'react';
-
-function LogoWrap(params) {
-  return (
-    <article className="logoWrap">
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png"
-        alt="로고"
-      />
-      <div className="columnLine" />
-      <h1 className="logo">Westagram</h1>
-    </article>
-  );
-}
-
-function Search() {
-  return (
-    <article className="search">
-      <input type="text" placeholder="검색" />
-    </article>
-  );
-}
-
-function PictogramWrap() {
-  return (
-    <article className="pictogramWrap">
-      <img
-        src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
-        alt="탐색"
-      />
-      <img
-        src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
-        alt="하트"
-      />
-      <img
-        src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
-        alt="프로필"
-      />
-    </article>
-  );
-}
-
-function Navigation() {
-  return (
-    <nav className="navigation">
-      <div className="navContainer">
-        <LogoWrap />
-        <Search />
-        <PictogramWrap />
-      </div>
-    </nav>
-  );
-}
+import Nav from '../../../components/Nav/Nav';
+import CommentContainer from './CommentContainer/CommentContainer';
+import './Main.scss';
 
 function ProfileWrap(params) {
   return (
     <div className="profileWrap">
       <div className="logoWrap">
-        <img src="images/yongwoo/heart.png" alt="logo" />
+        <img src="images/yongwoo/profile.jpeg" alt="logo" />
         <h2>94_yongyong_lee</h2>
       </div>
       <i className="fas fa-ellipsis-h" />
@@ -81,38 +32,6 @@ function FeedsPictogram() {
         src="https://cdn-icons-png.flaticon.com/512/84/84510.png"
         alt="save"
       />
-    </div>
-  );
-}
-
-function CommentContainer() {
-  return (
-    <div className="commentContainer">
-      <div className="commentWrap">
-        <input type="text" placeholder="댓글달기..." />
-        <button className="commetBtn">게시</button>
-      </div>
-    </div>
-  );
-}
-
-function PhotoWrap(params) {
-  return (
-    <div className="photoWrap">
-      <img src="images/yongwoo/instagram_feed.jpeg" alt="mainPhoto" />
-    </div>
-  );
-}
-
-function GoodWrap() {
-  return (
-    <div className="goodWrap">
-      <img
-        className="goodImg"
-        src="images/yongwoo/goodImage.jpeg"
-        alt="좋아요"
-      />
-      <p>sung_sae_h2 님 외 24명이 좋아합니다.</p>
     </div>
   );
 }
@@ -145,9 +64,18 @@ function FeedsContainer() {
     <main className="feedsContainer">
       <article className="feed">
         <ProfileWrap />
-        <PhotoWrap />
+        <div className="photoWrap">
+          <img src="images/yongwoo/instagram_feed.jpeg" alt="mainPhoto" />
+        </div>
         <FeedsPictogram />
-        <GoodWrap />
+        <div className="goodWrap">
+          <img
+            className="goodImg"
+            src="images/yongwoo/goodImage.jpeg"
+            alt="좋아요"
+          />
+          <p>sung_sae_h2 님 외 24명이 좋아합니다.</p>
+        </div>
         <TextWrap />
         <CommentContainer />
       </article>
@@ -271,7 +199,7 @@ function RecommendContainer() {
 function MainYongwoo() {
   return (
     <>
-      <Navigation />
+      <Nav />
       <div className="main">
         <FeedsContainer />
         <RecommendContainer />

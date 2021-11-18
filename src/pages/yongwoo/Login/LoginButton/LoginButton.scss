@@ -1,0 +1,13 @@
+@import '../../../../styles/variables.scss';
+
+.loginButton {
+  width: 266px;
+  padding: 8px 0;
+  margin: 15px 0;
+  color: #ffffff;
+  background-color: #b2dffc;
+  border: none;
+  border-radius: $border-radius;
+  outline: none;
+  font-weight: bold;
+}

@@ -26,81 +26,6 @@ $border-gray: 1px solid rgb(219, 219, 219);
   margin-top: 300px;
 }
 
-.navigation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  background-color: #ffffff;
-  width: 100%;
-  height: 54px;
-  border-bottom: $border-gray;
-
-  .navContainer {
-    @include flex-only-between;
-    width: 935px;
-
-    .logoWrap {
-      display: flex;
-      align-items: center;
-      width: 150px;
-
-      .columnLine {
-        width: 1px;
-        height: 25px;
-        margin-left: 22px;
-        border-right: 1px solid rgb(14, 14, 14);
-      }
-
-      .logo {
-        margin-left: 25px;
-        font-size: 22px;
-        font-family: 'Lobster', cursive;
-      }
-
-      img {
-        width: 25px;
-        cursor: pointer;
-      }
-    }
-  }
-
-  .search {
-    display: flex;
-    align-items: center;
-
-    input {
-      width: 215px;
-      height: 28px;
-      padding: 7px;
-      border: $border-gray;
-      border-radius: 3px;
-      background-color: #fafafa;
-      text-align: center;
-
-      &::placeholder {
-        color: $infomation-font-color;
-        background-image: url(../../../asset/images/magnifier.png);
-        background-size: contain;
-        background-position: 35%;
-        background-repeat: no-repeat;
-        text-align: center;
-      }
-    }
-  }
-}
-
-.pictogramWrap {
-  @include flex-space-between;
-  width: 100px;
-
-  img {
-    width: 23px;
-    cursor: pointer;
-  }
-}
-
 .feedsContainer {
   @include flex-only-between;
   margin: 0 auto;
@@ -228,34 +153,6 @@ i.fas.fa-heart.redHeart {
 }
 i.fas.fa-heart.blackHeart {
   display: inline-block;
-}
-
-.commentContainer {
-  display: flex;
-  width: 100%;
-  height: 50px;
-  margin-top: 10px;
-  border-top: $border-gray;
-
-  .commentWrap {
-    @include flex-space-between;
-    width: 570px;
-    margin: 0 auto;
-
-    input {
-      width: 500px;
-      border: none;
-      background: none;
-      outline: none;
-    }
-
-    button {
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: #bfe0fd;
-    }
-  }
 }
 
 .comment {

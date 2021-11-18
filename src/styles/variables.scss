@@ -3,7 +3,7 @@ $border-radius: 5px;
 
 @mixin logoText($logoText: 50px) {
   font-family: 'Lobster', cursive;
-  font-size: $logText;
+  font-size: $logoText;
 }
 
 @mixin flexCenter {
