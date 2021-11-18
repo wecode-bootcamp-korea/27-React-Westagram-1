@@ -3,11 +3,11 @@ import StoreWrap from './StoreWrap/StoreWrap';
 import LoginButton from './LoginButton/LoginButton';
 import UserInfomation from './UserInfomation/UserInfomation';
 import { Link } from 'react-router-dom';
-import './Login.scss';
+import './LoginYongwoo.scss';
 
 function LoginYongwoo() {
   return (
-    <section className="LoginYongwoo">
+    <section className="loginYongwoo">
       <article className="topWrap">
         <h1 className="logo">Westagram</h1>
         <UserInfomation />
