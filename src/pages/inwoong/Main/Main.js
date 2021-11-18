@@ -1,6 +1,6 @@
 import './Main.scss';
 import { useState } from 'react';
-
+import Comments from '../Comment/Comment';
 import Nav from '../../../components/Nav/Nav';
 
 function Main() {
@@ -81,12 +81,7 @@ function Main() {
               </p>
             </div>
             <div className="commentBox" />
-            {comments.map((el, index) => (
-              <div className="comment" key={index}>
-                <span className="likeComment bold commentAdd">cannon_mj</span>
-                <span className=" likeComment dot">{el} </span>
-              </div>
-            ))}
+            <Comments comments={comments} />
             <div>
               <span className="time">42분전</span>
             </div>
