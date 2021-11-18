@@ -1,0 +1,46 @@
+.nav {
+  background-color: white;
+  display: flex;
+  position: fixed;
+  top: 0;
+  align-items: center;
+  width: 100%;
+  min-width: 650px;
+
+  .instaLogo {
+    width: 50px;
+  }
+
+  .logoBox {
+    width: 60px;
+  }
+
+  .border {
+    font-weight: lighter;
+  }
+
+  .instaTitle {
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .inputBox::placeholder {
+    text-align: center;
+  }
+
+  .rightIcon {
+    font-size: 30px;
+    margin-right: 20px;
+  }
+
+  .inputBox {
+    width: 250px;
+    height: 30px;
+    border: 1px gray solid;
+    background-color: rgb(241, 241, 241);
+  }
+}
