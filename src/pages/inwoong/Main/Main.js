@@ -17,7 +17,6 @@ function Main() {
     setComments(prev => [...prev, comment]);
     setComment('');
   }
-  console.log(comments);
 
   return (
     <div className="MainInwoong">
