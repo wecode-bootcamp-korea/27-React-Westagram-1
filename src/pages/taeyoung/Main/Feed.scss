@@ -1,0 +1,143 @@
+@import '../../../styles/variables.scss';
+
+.feedBox {
+  background: white;
+  border: 1px solid $color-outline;
+  padding-bottom: 10px;
+
+  .feedTop {
+    @include flexCenter;
+    justify-content: space-between;
+    margin: 20px;
+
+    .feedUserPorfile {
+      display: flex;
+      align-items: center;
+
+      .feedUserPorfileLeft {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50px;
+        }
+      }
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    img {
+      width: 20px;
+    }
+  }
+
+  .feedImg {
+    height: 600px;
+    width: 600px;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .feedBottom {
+    margin: 0 20px;
+
+    .feedIcon {
+      display: flex;
+      justify-content: space-between;
+      font-size: 24px;
+      margin: 20px 0;
+
+      .feedIconLeft i {
+        margin-right: 10px;
+      }
+    }
+
+    .feedUser {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      .feedUserImg {
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50px;
+        }
+      }
+
+      .feedUser span {
+        color: black;
+      }
+    }
+
+    .feedCommentLeft {
+      color: rgb(122, 122, 122);
+      font-size: 12px;
+
+      .feedUserBox {
+        display: flex;
+        justify-content: space-between;
+
+        .feedUserName {
+          font-size: 14px;
+          color: black;
+          font-weight: 500;
+          margin-bottom: 6px;
+        }
+
+        .feedLike {
+          font-size: 18px;
+        }
+      }
+
+      .moreComment {
+        color: rgb(122, 122, 122);
+        margin-right: 10px;
+        font-size: 12px;
+      }
+    }
+
+    .feedTime {
+      color: rgb(122, 122, 122);
+      font-size: 8px;
+    }
+  }
+}
+
+.reCommnet {
+  // position: relative;
+  margin-bottom: 40px;
+  display: flex;
+
+  .recommnetInput {
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border: 1px solid #d1d1d1;
+    border-top: none;
+    border-right: none;
+    outline: none;
+  }
+
+  .recommnetBt {
+    width: 70px;
+    border: 1px solid #d1d1d1;
+    border-top: none;
+    border-left: none;
+    background: white;
+    color: #0095f6;
+  }
+}

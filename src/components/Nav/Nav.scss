@@ -1,0 +1,55 @@
+@import '../../styles/variables.scss';
+@import '../../styles/common.scss';
+
+header {
+  width: 100vw;
+  padding: 10px 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  border-bottom: 1px solid $color-outline;
+
+  nav {
+    @include flexCenter;
+    justify-content: space-between;
+
+    .logoContainer {
+      @include flexCenter;
+      flex: 1;
+
+      .logo {
+        width: 30px;
+        margin-right: 10px;
+      }
+
+      .logoName {
+        @include logoText($logoText: 30px);
+        padding-right: 20px;
+      }
+    }
+    .inputContainer {
+      @include flexCenter;
+      flex: 1;
+
+      .mainSearch {
+        width: 200px;
+        padding: 6px 10px;
+      }
+    }
+
+    .userIconContainer {
+      @include flexCenter;
+      flex: 1;
+
+      img {
+        width: 30px;
+        margin-left: 20px;
+      }
+      // 아래 코드는 아이콘 크기가 달라서 아이콘 3번째만 사이즈 조절하기 위한 코드
+      img:nth-child(3) {
+        width: 26px;
+      }
+    }
+  }
+}

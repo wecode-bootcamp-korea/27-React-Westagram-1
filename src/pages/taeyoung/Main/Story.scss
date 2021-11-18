@@ -1,0 +1,14 @@
+@import '../../../styles/variables.scss';
+
+.feedContainer {
+  width: 600px;
+
+  .storyBox {
+    margin: 40px 0;
+    padding: 20px;
+    display: flex;
+    background: white;
+    border: 1px solid $color-outline;
+    overflow: scroll;
+  }
+}

@@ -1,6 +1,24 @@
-function MainTaeyoung() {
+import React from 'react';
+import Nav from '../../../components/nav/Nav.js';
+import Story from './Story';
+import Feed from './Feed';
+import Side from './Side';
+
+import './Main.scss';
+
+function Main() {
   return (
-    <div>하이</div>
-  )
+    <>
+      <Nav />
+      <main>
+        <div>
+          <Story />
+          <Feed />
+        </div>
+        <Side />
+      </main>
+    </>
+  );
 }
-export default MainTaeyoung
+
+export default Main;
