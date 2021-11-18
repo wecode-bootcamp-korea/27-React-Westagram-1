@@ -1,10 +1,10 @@
 import React from 'react';
 import LoginBtn from './LoginBtn';
-import './LoginForm.scss';
+import './LoginFormYoujin.scss';
 
-function LoginForm() {
+function LoginFormYoujin() {
   return (
-    <div className="LoginForm">
+    <div className="loginFormYoujin">
       <form>
         <input
           id="id1"
@@ -18,4 +18,4 @@ function LoginForm() {
   );
 }
 
-export default LoginForm;
+export default LoginFormYoujin;

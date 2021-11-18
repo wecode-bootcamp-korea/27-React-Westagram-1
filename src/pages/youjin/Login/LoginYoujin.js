@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function LoginYoujin() {
   return (
-    <div className="LoginYoujin">
+    <div className="loginYoujin">
       <article>
         <div className="logo">
           <p>westagram</p>

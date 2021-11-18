@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './LoginBtn.scss';
+import './LoginBtnYoujin.scss';
 
-function LoginBtn() {
+function LoginBtnYoujin() {
   const navigate = useNavigate();
   const goToMain = () => {
     if (true) {
@@ -12,7 +12,7 @@ function LoginBtn() {
     }
   };
   return (
-    <div class="LoginBtn">
+    <div class="loginBtnYoujin">
       <button className="beforeButton" onClick={goToMain}>
         로그인
       </button>
@@ -20,4 +20,4 @@ function LoginBtn() {
   );
 }
 
-export default LoginBtn;
+export default LoginBtnYoujin;

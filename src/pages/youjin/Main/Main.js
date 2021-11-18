@@ -7,7 +7,7 @@ import Feeds from '../Main/Feeds/Feeds';
 
 function MainYoujin() {
   return (
-    <div className="MainYoujin">
+    <div className="mainYoujin">
       <header>
         <Nav />
       </header>

@@ -1,44 +1,41 @@
 @import '../../styles/variables.scss';
-.Nav {
+.nav {
   width: 100%;
   nav {
     @include flexBetween;
     width: 70%;
-    margin: 20px auto;
+    margin: 10px auto;
     .logoBar {
       @include flexCenter;
       img {
         width: 30px;
-        margin: 0 10px;
+        margin-right: 10px;
       }
-      .logoName a {
-        width: 300px;
-        padding: 0 10px;
-        text-decoration-line: none;
+      .logoName {
+        padding-left: 10px;
         border-left: 1px solid #000;
+        text-decoration-line: none;
         @include logoText($logoText: 30px);
         color: #000;
       }
     }
     .searchBar {
-      padding: 0 auto;
       position: relative;
+      padding: 0 auto;
       input {
-        font-size: 15px;
         padding: 5px 20px;
         outline: none;
         border: 1px solid $color-outline;
         border-radius: 3px;
         background-color: #fafafa;
+        font-size: 15px;
       }
     }
     .naviBar {
       @include flexCenter;
-      a {
-        img {
-          width: 30px;
-          margin: 0 10px;
-        }
+      img {
+        width: 30px;
+        margin: 0 10px;
       }
     }
   }

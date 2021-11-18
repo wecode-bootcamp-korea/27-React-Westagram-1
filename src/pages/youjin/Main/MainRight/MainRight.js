@@ -3,7 +3,7 @@ import './MainRight.scss';
 
 function MainRight() {
   return (
-    <div className="MainRight">
+    <div className="mainRight">
       <div className="sideContainer">
         <div className="showMyId">
           <img src="images/youjin/myphoto.jpg" alt="" />

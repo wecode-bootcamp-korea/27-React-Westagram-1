@@ -1,16 +1,17 @@
 @import '../../../styles/variables.scss';
+.mainYoujin {
+  header {
+    @include flexCenter;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #dbdbdb;
+  }
 
-header {
-  @include flexCenter;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  background-color: #fff;
-  border-bottom: 1px solid #dbdbdb;
-}
-
-main {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }

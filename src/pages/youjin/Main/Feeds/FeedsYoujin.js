@@ -1,9 +1,9 @@
 import React from 'react';
-import './Feeds.scss';
+import './FeedsYoujin.scss';
 
-function Feeds() {
+function FeedsYoujin() {
   return (
-    <div class="Feeds">
+    <div class="feedsYoujin">
       <article className="articleBox">
         <div className="profileBox">
           <div className="profileAndId">
@@ -51,4 +51,4 @@ function Feeds() {
   );
 }
 
-export default Feeds;
+export default FeedsYoujin;
