@@ -1,4 +1,4 @@
-.Login {
+.LoginInwoong {
   display: block;
   background-color: white;
   width: 500px;
@@ -33,6 +33,18 @@
 
   .button {
     display: block;
+    background-color: rgb(78, 78, 250);
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px rgb(255, 255, 255) solid;
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+  }
+
+  .closedButton {
+    display: block;
     background-color: rgb(166, 166, 245);
     width: 300px;
     margin-left: auto;
@@ -43,7 +55,6 @@
     color: white;
     opacity: 0.5;
   }
-
   .findPassword {
     text-align: center;
     margin-top: 100px;

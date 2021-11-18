@@ -1,10 +1,26 @@
 import './Main.scss';
+import { useState } from 'react';
 
 import Nav from '../../../components/Nav/Nav';
 
 function Main() {
+  const [comment, setComment] = useState('');
+  const [comments, setComments] = useState([]);
+  function handleCommentValue(event) {
+    setComment(event.target.value);
+  }
+  function onSubmit(event) {
+    event.preventDefault();
+    if (comment === '') {
+      return;
+    }
+    setComments(prev => [...prev, comment]);
+    setComment('');
+  }
+  console.log(comments);
+
   return (
-    <div className="main">
+    <div className="MainInwoong">
       <Nav />
       <div className="feedWrapper">
         <div style={{ flexGrow: 2 }} />
@@ -66,20 +82,26 @@ function Main() {
               </p>
             </div>
             <div className="commentBox" />
+            {comments.map((el, index) => (
+              <div className="comment" key={index}>
+                <span className="likeComment bold commentAdd">cannon_mj</span>
+                <span className=" likeComment dot">{el} </span>
+              </div>
+            ))}
             <div>
               <span className="time">42분전</span>
             </div>
             <div className="inputWrapper">
-              <input
-                className="input-Box"
-                type="text"
-                placeholder="댓글달기..."
-              />
-              <div className="postBox">
-                <button className="post" disabled="">
-                  게시
-                </button>
-              </div>
+              <form onSubmit={onSubmit}>
+                <input
+                  className="input-Box"
+                  type="text"
+                  value={comment}
+                  placeholder="댓글달기..."
+                  onChange={handleCommentValue}
+                />
+                <button className="post">게시</button>
+              </form>
             </div>
           </div>
         </div>
