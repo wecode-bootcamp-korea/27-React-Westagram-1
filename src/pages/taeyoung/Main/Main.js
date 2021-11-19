@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from '../../../components/nav/Nav.js';
+import Nav from '../../../components/Nav/Nav.js';
 import Story from './Story';
 import Feed from './Feed';
 import Side from './Side';
