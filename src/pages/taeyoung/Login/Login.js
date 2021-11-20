@@ -2,15 +2,14 @@ import React, { useState } from 'react';
 import './Login.scss';
 
 function LoginTaeyoung(e) {
+  //=============  //=============  //=============
+  //사용자 입력 데이터 저장
   const [newInput, setnewInput] = useState({
     idValue: '',
     pwValue: '',
   });
-  console.log(newInput);
+  // console.log(newInput);
 
-  // const { idValue, pwValue } = newInput;
-  // console.log(newInput.idValue);
-  // console.log(newInput.pwValue);
   const handleIdInput = e => {
     const { name, value } = e.target;
     setnewInput({
@@ -18,6 +17,17 @@ function LoginTaeyoung(e) {
       [name]: value,
     });
   };
+
+  //=============  //=============  //=============
+  //로그인 버튼 활성화
+  const { idValue, pwValue } = newInput; // 비구조화를 통해서 state의 각 key의 value를 html태그에서 알 수 있도록 해주어야 해당 값을 사용할 수 있다.
+
+  // console.log(idValue.includes('@'));
+  // console.log(pwValue.length >= 5);
+  // console.log(idValue.includes('@') && pwValue.length >= 5);
+
+  // button의 조건에서 정상적으로 입력되는지 확인하기 위한 console.log
+  //=============  //=============  //=============
 
   return (
     <main className="login">
@@ -39,7 +49,14 @@ function LoginTaeyoung(e) {
             // value={pwValue}
             onChange={handleIdInput}
           />
-          <button className="button">로그인</button>
+          <button
+            className="button"
+            name="loginButton"
+            onClick=""
+            disabled={!(idValue.includes('@') && pwValue >= 5)}
+          >
+            로그인
+          </button>
         </form>
 
         <div className="divisionLine">
