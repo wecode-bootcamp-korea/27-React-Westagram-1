@@ -7,11 +7,14 @@ function LoginTaeyoung(e) {
   const [newInput, setnewInput] = useState({
     idValue: '',
     pwValue: '',
+    buttonColor: '',
   });
-  // console.log(newInput);
+  console.log(newInput);
 
   const handleIdInput = e => {
     const { name, value } = e.target;
+    if (idValue.includes('@') && pwValue.length > 4) {
+    }
     setnewInput({
       ...newInput,
       [name]: value,
@@ -21,12 +24,11 @@ function LoginTaeyoung(e) {
   //=============  //=============  //=============
   //로그인 버튼 활성화
   const { idValue, pwValue } = newInput; // 비구조화를 통해서 state의 각 key의 value를 html태그에서 알 수 있도록 해주어야 해당 값을 사용할 수 있다.
-
+  const test = idValue.includes('@') && pwValue.length > 4;
   // console.log(idValue.includes('@'));
   // console.log(pwValue.length >= 5);
-  // console.log(idValue.includes('@') && pwValue.length >= 5);
+  // console.log(idValue.includes('@') && pwValue.length > 4);
 
-  // button의 조건에서 정상적으로 입력되는지 확인하기 위한 console.log
   //=============  //=============  //=============
 
   return (
@@ -39,21 +41,18 @@ function LoginTaeyoung(e) {
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
             name="idValue"
-            // value={idValue}
             onChange={handleIdInput}
           />
           <input
             type="password"
             placeholder="비밀번호"
             name="pwValue"
-            // value={pwValue}
             onChange={handleIdInput}
           />
           <button
             className="button"
-            name="loginButton"
-            onClick=""
-            disabled={!(idValue.includes('@') && pwValue >= 5)}
+            disabled={idValue.includes('@') && pwValue.length > 4}
+            style={{ background: test ? '#0095f6' : '#c0dffd' }}
           >
             로그인
           </button>
