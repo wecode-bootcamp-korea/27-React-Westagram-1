@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import LoginButton from '../LoginButton/LoginButton';
 import './UserInfomation.scss';
 
 function UserInfomation(props) {
@@ -11,6 +12,7 @@ function UserInfomation(props) {
   const handlePwInput = event => {
     setPw(event.target.value);
   };
+
   return (
     <form className="userInfomation">
       <input
@@ -27,6 +29,7 @@ function UserInfomation(props) {
         value={pw}
         onChange={handlePwInput}
       />
+      <LoginButton id={id} pw={pw} />
     </form>
   );
 }

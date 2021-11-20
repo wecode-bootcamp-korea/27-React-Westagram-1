@@ -1,6 +1,5 @@
 import React from 'react';
 import StoreWrap from './StoreWrap/StoreWrap';
-import LoginButton from './LoginButton/LoginButton';
 import UserInfomation from './UserInfomation/UserInfomation';
 import './LoginYongwoo.scss';
 
@@ -10,7 +9,6 @@ function LoginYongwoo() {
       <article className="topWrap">
         <h1 className="logo">Westagram</h1>
         <UserInfomation />
-        <LoginButton />
         <div className="meddleLine">
           <div className="line" />
           <p>또는</p>
