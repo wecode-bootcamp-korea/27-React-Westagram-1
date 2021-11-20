@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../LoginButton/LoginButton.scss';
@@ -8,11 +9,13 @@ function LoginButton(props) {
   const goToMain = () => {
     navigate('/main-yongwoo');
   };
+  let idValue = props.id;
+  let passWordValue = props.pw;
   loginBtnColor = 'loginButtonChange';
   return (
     <button
       className={
-        props.id.includes('@') && props.pw.length >= 5
+        idValue.includes('@') && passWordValue.length >= 5
           ? loginBtnColor
           : loginBtn
       }
