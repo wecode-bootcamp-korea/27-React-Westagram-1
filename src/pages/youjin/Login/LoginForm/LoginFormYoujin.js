@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import LoginBtnYoujin from './LoginBtnYoujin';
+import { useNavigate } from 'react-router-dom';
 import './LoginFormYoujin.scss';
 
 function LoginFormYoujin() {
@@ -7,6 +7,7 @@ function LoginFormYoujin() {
     idValue: '',
     passwordValue: '',
   });
+  const [booleanBtn, setBooleanBtn] = useState(false);
 
   const handleIdInput = event => {
     const { name, value } = event.target;
@@ -16,24 +17,51 @@ function LoginFormYoujin() {
     });
   };
 
+  const passLogin = () => {
+    isValue.idValue.includes('@') && isValue.passwordValue.length > 4
+      ? setBooleanBtn(true)
+      : setBooleanBtn(false);
+  };
+
+  const navigate = useNavigate();
+
+  const goToMain = () => {
+    if (booleanBtn) {
+      navigate('/main-youjin');
+    } else {
+      alert('id와 password를 다시 입력해주세요.');
+    }
+  };
   return (
     <div className="loginFormYoujin">
       <form>
         <input
+          className="inputBox"
           id="id1"
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
           onChange={handleIdInput}
+          onKeyUp={passLogin}
           name="idValue"
         />
         <input
+          className="inputBox"
           id="password1"
           type="password"
           placeholder="비밀번호"
           onChange={handleIdInput}
+          onKeyUp={passLogin}
           name="passwordValue"
         />
-        <LoginBtnYoujin />
+        <div className="loginBtnYoujin">
+          <button
+            className={booleanBtn ? 'afterButton' : 'beforeButton'}
+            onClick={goToMain}
+            disabled={booleanBtn ? false : true}
+          >
+            로그인
+          </button>
+        </div>
       </form>
     </div>
   );
