@@ -19,7 +19,9 @@ function LoginButton(props) {
           ? loginBtnColor
           : loginBtn
       }
-      onClick={goToMain}
+      onClick={
+        idValue.includes('@') && passWordValue.length >= 5 ? goToMain : ''
+      }
     >
       로그인
     </button>
