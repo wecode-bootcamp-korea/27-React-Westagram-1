@@ -71,37 +71,42 @@
           justify-content: flex-start;
           align-items: center;
           margin: 5px 10px;
-          a {
-            text-decoration: none;
-            color: #000;
-            .writeId {
-              font-weight: 600;
-              padding-right: 5px;
-            }
+
+          .writeId {
+            padding-right: 5px;
+            font-weight: 600;
           }
         }
       }
     }
-    .beforeFewMin {
+  }
+  .beforeFewMin {
+    padding: 5px 10px;
+  }
+  .addComment {
+    @include flexBetween;
+    background-color: #fff;
+    input {
+      width: 100%;
+      border: none;
+      padding: 10px 10px;
+      outline: none;
+    }
+    .buttonOn {
+      width: 10%;
+      border: none;
+      background-color: #fff;
+      color: #0095f6;
+      font-weight: 600;
       padding: 5px 10px;
     }
-    .addComment {
-      @include flexBetween;
+    .buttonOff {
+      width: 10%;
+      border: none;
       background-color: #fff;
-      input {
-        width: 100%;
-        border: none;
-        padding: 10px 10px;
-        outline: none;
-      }
-      #postBtn {
-        width: 10%;
-        border: none;
-        background-color: #fff;
-        color: #c5e1fa;
-        font-weight: 600;
-        padding: 5px 10px;
-      }
+      color: #c5e1fa;
+      font-weight: 600;
+      padding: 5px 10px;
     }
   }
 }

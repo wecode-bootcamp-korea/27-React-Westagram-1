@@ -34,14 +34,13 @@ function LoginFormYoujin() {
   };
   return (
     <div className="loginFormYoujin">
-      <form>
+      <form onKeyUp={passLogin} onChange={handleIdInput}>
         <input
           className="inputBox"
           id="id1"
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
-          onChange={handleIdInput}
-          onKeyUp={passLogin}
+          // onChange={handleIdInput}
           name="idValue"
         />
         <input
@@ -49,8 +48,7 @@ function LoginFormYoujin() {
           id="password1"
           type="password"
           placeholder="비밀번호"
-          onChange={handleIdInput}
-          onKeyUp={passLogin}
+          // onChange={handleIdInput}
           name="passwordValue"
         />
         <div className="loginBtnYoujin">
