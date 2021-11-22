@@ -1,7 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Feed.scss';
 
 function Feed() {
+  const [newInput, setInput] = useState({
+    comment: '',
+    commentList: [],
+  });
+  // console.log(newInput);
+  // input의 value를 state에 저장
+  const getValue = e => {
+    setInput({
+      comment: e.target.value,
+      commentList: [...newInput.commentList],
+    });
+  };
+  // 버튼 클릭 -> changeComment() 실행
+  const buttonClick = () => {
+    const add = newInput.commentList; //add변수에 commentList의 []를 저장
+    // console.log(add);
+    add.push(newInput.comment); // 변수 add에 input에 입력된 value를 푸시
+    // console.log(add);
+    setInput({
+      comment: '', // 클릭 및 엔터로 댓글 작성 후 인풋창을 초기화하기 위해 ''로 변경
+      commentList: add, // 위에서 합친 add의 value인 [입력값]으로 state를 변경
+    });
+    // console.log(setInput);
+  };
+
+  // 엔터키 누를 시 changeComment() 실행
+  const pressEnter = e => {
+    if (e.key === 'Enter') {
+      buttonClick();
+    }
+  };
+
   return (
     <>
       <article className="feedBox">
@@ -49,18 +81,43 @@ function Feed() {
               <span className="moreComment">댓글 2개 모두 보기</span>
               <span className="feedTime">1시간 전</span>
             </div>
+            <ul>
+              {newInput.commentList.map(element => (
+                <li key={element.commentList}>
+                  <span>작성자</span>
+                  <i className="far fa-heart" />
+                  <div>{element}</div>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </article>
 
-      <div className="reCommnet">
+      <form
+        className="reCommnet"
+        action="/create_process"
+        method="post"
+        onSubmit={e => {
+          e.preventDefault();
+        }}
+      >
         <input
           type="text"
           className="recommnetInput"
           placeholder="댓글 달기..."
+          onChange={getValue}
+          onKeyDown={pressEnter}
+          value={newInput.comment} //input 초기화
         />
-        <button className="recommnetBt">게시</button>
-      </div>
+        <button
+          className="recommnetBt"
+          onClick={buttonClick}
+          disabled={newInput.comment.value !== '' ? true : false}
+        >
+          게시
+        </button>
+      </form>
     </>
   );
 }
