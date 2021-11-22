@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import './Feed.scss';
+import Comment from './Comment';
 
 function Feed() {
+  const [name, setName] = useState('name');
   const [newInput, setInput] = useState({
     comment: '',
     commentList: [],
   });
+
   // console.log(newInput);
   // input의 value를 state에 저장
   const getValue = e => {
@@ -14,6 +17,9 @@ function Feed() {
       commentList: [...newInput.commentList],
     });
   };
+
+  console.log(newInput);
+  console.log(newInput.comment);
   // 버튼 클릭 -> changeComment() 실행
   const buttonClick = () => {
     const add = newInput.commentList; //add변수에 commentList의 []를 저장
@@ -25,13 +31,6 @@ function Feed() {
       commentList: add, // 위에서 합친 add의 value인 [입력값]으로 state를 변경
     });
     // console.log(setInput);
-  };
-
-  // 엔터키 누를 시 changeComment() 실행
-  const pressEnter = e => {
-    if (e.key === 'Enter') {
-      buttonClick();
-    }
   };
 
   return (
@@ -83,11 +82,11 @@ function Feed() {
             </div>
             <ul>
               {newInput.commentList.map(element => (
-                <li key={element.commentList}>
-                  <span>작성자</span>
-                  <i className="far fa-heart" />
-                  <div>{element}</div>
-                </li>
+                <Comment
+                  comment={element}
+                  name={name}
+                  key={element.commentList}
+                />
               ))}
             </ul>
           </div>
@@ -107,13 +106,13 @@ function Feed() {
           className="recommnetInput"
           placeholder="댓글 달기..."
           onChange={getValue}
-          onKeyDown={pressEnter}
+          // onKeyDown={pressEnter}
           value={newInput.comment} //input 초기화
         />
         <button
           className="recommnetBt"
           onClick={buttonClick}
-          disabled={newInput.comment.value !== '' ? true : false}
+          disabled={newInput.comment === '' ? true : false}
         >
           게시
         </button>

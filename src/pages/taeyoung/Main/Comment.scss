@@ -1,0 +1,19 @@
+.commentList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  .commentBox {
+    display: flex;
+    align-items: center;
+
+    .commentName {
+      font-size: 14px;
+      margin-right: 10px;
+    }
+  }
+  .userComment {
+    font-weight: 400;
+    color: rgb(123, 123, 123);
+  }
+}
