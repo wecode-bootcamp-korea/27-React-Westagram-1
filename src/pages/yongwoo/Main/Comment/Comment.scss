@@ -1,0 +1,28 @@
+.comment {
+  .commentNameBold {
+    font-weight: bold;
+
+    .commentMargin {
+      font-weight: normal;
+    }
+  }
+
+  .heart {
+    width: 15px;
+    cursor: pointer;
+  }
+
+  .heartColor {
+    display: none;
+    width: 15px;
+    cursor: pointer;
+  }
+  li.commentText {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2px;
+  }
+  span.commentNameBold {
+    margin-right: 5px;
+  }
+}

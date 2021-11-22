@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Comment from '../Comment/Comment';
 import './FeedsContainer.scss';
 
 function FeedsContainer() {
@@ -67,23 +68,7 @@ function FeedsContainer() {
               </div>
             </li>
           </ul>
-
-          <ul className="comment">
-            {commentArray.map((value, index) => (
-              <li key={index} className="commentText">
-                <div className="commentMargin">
-                  <span className="commentNameBold">94_yongyong_lee</span>
-                  {value}
-                </div>
-                <div className="commentStart">
-                  <i className="far fa-trash-alt" />
-                  {/* <i className="far fa-heart" /> */}
-                  <i className="fas fa-heart colorHeart" />
-                </div>
-              </li>
-            ))}
-          </ul>
-
+          <Comment commentArray={commentArray} />
           <p className="commentView">54분전</p>
         </div>
         <div className="commentContainer" onSubmit={onSubmit}>
