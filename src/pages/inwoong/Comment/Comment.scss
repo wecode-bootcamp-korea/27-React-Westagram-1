@@ -1,0 +1,33 @@
+.CommentInwoong {
+  .comment {
+    height: 17px;
+    position: relative;
+  }
+
+  .likeComment {
+    margin-left: 4px;
+    font-size: 13px;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .dot {
+    font-size: 13px;
+  }
+
+  .commentAdd {
+    margin-left: 19px;
+    margin-top: 5px;
+  }
+
+  .heart {
+    position: absolute;
+    right: 10px;
+  }
+
+  .weakHeart {
+    color: rgba(131, 131, 131, 0.61);
+  }
+}
