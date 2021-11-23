@@ -29,9 +29,7 @@ function FeedBox() {
     setComment(event.target.value);
   }
   function onSubmit(event) {
-    console.log(event.target.name); //키값 대신 name 으로 한번 해결해보기
     setObject({ id: event.target.name, content: comment });
-    console.log(object);
     event.preventDefault();
     if (comment === '') {
       return;

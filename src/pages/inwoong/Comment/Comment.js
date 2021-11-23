@@ -8,7 +8,6 @@ function Comments({ comments, count }) {
     setHeart('black');
   }
   const [heart, setHeart] = useState('red');
-  console.log(comments);
   let filtered = comments.filter(el => Number(el.id) === count);
   return (
     <div className="CommentInwoong">
