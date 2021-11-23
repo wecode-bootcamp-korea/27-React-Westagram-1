@@ -3,11 +3,11 @@ import React from 'react';
 import './Comment.scss';
 
 function Comment(props) {
-  let commentArray = props.commentArray;
+  const { commentArray } = props;
   return (
     <ul className="comment">
-      {commentArray.map((value, index) => (
-        <li key={index} className="commentText">
+      {commentArray.map((value, id) => (
+        <li key={id} className="commentText">
           <div className="commentMargin">
             <span className="commentNameBold">94_yongyong_lee</span>
             {value}

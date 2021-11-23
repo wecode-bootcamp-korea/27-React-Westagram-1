@@ -9,19 +9,15 @@ function LoginButton(props) {
   const goToMain = () => {
     navigate('/main-yongwoo');
   };
-  let idValue = props.id;
-  let passWordValue = props.pw;
+
+  const { id, pw } = props;
+  const userInputValue = id.includes('@') && pw.length >= 5;
   loginBtnColor = 'loginButtonChange';
+
   return (
     <button
-      className={
-        idValue.includes('@') && passWordValue.length >= 5
-          ? loginBtnColor
-          : loginBtn
-      }
-      onClick={
-        idValue.includes('@') && passWordValue.length >= 5 ? goToMain : ''
-      }
+      className={userInputValue ? loginBtnColor : loginBtn}
+      onClick={userInputValue ? goToMain : ''}
     >
       로그인
     </button>

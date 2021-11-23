@@ -7,10 +7,12 @@ function UserInfomation(props) {
   const [pw, setPw] = useState('');
 
   const handleIdInput = event => {
-    setId(event.target.value);
+    const { value } = event.target;
+    setId(value);
   };
   const handlePwInput = event => {
-    setPw(event.target.value);
+    const { value } = event.target;
+    setPw(value);
   };
 
   return (

@@ -5,7 +5,10 @@ import './FeedsContainer.scss';
 function FeedsContainer() {
   const [comment, setComment] = useState('');
   const [commentArray, setCommentArray] = useState([]);
-  const onChange = event => setComment(event.target.value);
+  const onChange = event => {
+    const { value } = event.target;
+    setComment(value);
+  };
   const onSubmit = event => {
     event.preventDefault();
     if (comment === '') {
