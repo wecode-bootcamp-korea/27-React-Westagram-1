@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "userName": "mento2928",
+    "content": "Welcome to world best coding bootcamp!",
+    "src": "/images/inwoong/profile.jpg",
+    "src2": "/images/inwoong/feed.jpg"
+  },
+  {
+    "id": 2,
+    "userName": "kidwju1818",
+    "content": "Hi there.",
+    "src": "/images/inwoong/profile2.jpg",
+    "src2": "/images/inwoong/feed2.jpg"
+  },
+  {
+    "id": 3,
+    "userName": "2_noong",
+    "content": "Hey.",
+    "src": "/images/inwoong/profile3.jpg",
+    "src2": "/images/inwoong/feed3.jpg"
+  },
+  {
+    "id": 4,
+    "userName": "xion_one",
+    "content": "Hey.",
+    "src": "/images/inwoong/profile4.jpg",
+    "src2": "/images/inwoong/feed4.jpg"
+  }
+]

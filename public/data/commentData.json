@@ -1,0 +1,80 @@
+[
+  {
+    "key": 1,
+    "userName": "wecode",
+    "content": "Welcome to world best coding bootcamp!",
+    "id": 1
+  },
+  {
+    "key": 1,
+    "userName": "joonsikyang",
+    "content": "Hi there.",
+    "id": 2
+  },
+  {
+    "key": 4,
+    "userName": "jayPark",
+    "content": "Hey.",
+    "id": 3
+  },
+  {
+    "key": 2,
+    "userName": "inwoongkang",
+    "content": "신사임당~~.",
+    "id": 4
+  },
+  {
+    "key": 2,
+    "userName": "xion_one",
+    "content": "안녕하세여 반가워요.",
+    "id": 5
+  },
+  {
+    "key": 3,
+    "userName": "hwangseeongjae",
+    "content": "여기가 어디야?.",
+    "id": 6
+  },
+  {
+    "key": 3,
+    "userName": "northfacegwad",
+    "content": "만나서 반가워.",
+    "id": 7
+  },
+  {
+    "key": 1,
+    "userName": "superbee",
+    "content": "나는 돈이 너무 많아.",
+    "id": 8
+  },
+  {
+    "key": 2,
+    "userName": "gray",
+    "content": "나랑도 같이가자.",
+    "id": 9
+  },
+  {
+    "key": 3,
+    "userName": "seongjongjo",
+    "content": "나는 종호라고 해",
+    "id": 10
+  },
+  {
+    "key": 3,
+    "userName": "dowonjang",
+    "content": "크리스피도넛이 너무 좋아.",
+    "id": 11
+  },
+  {
+    "key": 4,
+    "userName": "youjinhong",
+    "content": "래원 노래 너무 좋아.",
+    "id": 12
+  },
+  {
+    "key": 4,
+    "userName": "mariakim",
+    "content": "옥탑방에서 복덕방.",
+    "id": 13
+  }
+]

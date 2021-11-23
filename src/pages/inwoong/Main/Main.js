@@ -1,103 +1,15 @@
 import './Main.scss';
-import { useState } from 'react';
-import Comments from '../Comment/Comment';
 import Nav from '../../../components/Nav/Nav';
+import FeedBox from '../FeedBox/FeedBox';
 
 function Main() {
-  const [comment, setComment] = useState('');
-  const [comments, setComments] = useState([]);
-  function handleCommentValue(event) {
-    setComment(event.target.value);
-  }
-  function onSubmit(event) {
-    event.preventDefault();
-    if (comment === '') {
-      return;
-    }
-    setComments(prev => [...prev, comment]);
-    setComment('');
-  }
-
   return (
     <div className="MainInwoong">
       <Nav />
       <div className="feedWrapper">
         <div style={{ flexGrow: 2 }} />
-        <div className="feedBox">
-          <div className="feedTopBox">
-            <div>
-              <img
-                className="image box-margin"
-                src="images/inwoong/profile.jpg"
-                alt="profile"
-              />
-            </div>
-            <div className="box-margin mj">
-              <h2>cannon_mj</h2>
-            </div>
-            <div style={{ flexGrow: 1 }} />
-            <div className="dot-margin">
-              <i className="fas fa-ellipsis-h dot" />
-            </div>
-          </div>
-          <div className="imageWrapper">
-            <img
-              className="feedImage"
-              src="images/inwoong/feed.jpg"
-              alt="profile"
-            />
-          </div>
-          <div className="commentWrapper">
-            <div className="fontWrapper">
-              <i className="far fa-heart leftIcon" />
-              <i className="far fa-comment leftIcon" />
-              <i className="fas fa-share-alt leftIcon" />
-              <i className="far fa-bookmark bookmark" />
-            </div>
-            <div className="likeWrapper">
-              <img
-                src="images/inwoong/profile2.jpg"
-                className="smallImage box-margin"
-                alt="profile"
-              />
-              <p className="likeComment">
-                <span className="bold">ainworld</span>님{' '}
-                <span className="bold">외 10명</span>이 좋아합니다
-              </p>
-            </div>
-            <div>
-              <p className="box-margin bottom-margin">
-                <span className="bold likeComment">cannon_mj</span>
-                <span className="likeComment">
-                  위워크에서 진행한 베이킹 클래스...
-                </span>{' '}
-                <span className="likeComment add">더 보기</span>
-              </p>
-            </div>
-            <div>
-              <p className="box-margin bottom-margin">
-                <span className="bold likeComment">seongjae99</span>
-                <span className="likeComment">거봐 좋았잖아 ~~~</span>{' '}
-              </p>
-            </div>
-            <div className="commentBox" />
-            <Comments comments={comments} />
-            <div>
-              <span className="time">42분전</span>
-            </div>
-            <div className="inputWrapper">
-              <form onSubmit={onSubmit}>
-                <input
-                  className="input-Box"
-                  type="text"
-                  value={comment}
-                  placeholder="댓글달기..."
-                  onChange={handleCommentValue}
-                />
-                <button className="post">게시</button>
-              </form>
-            </div>
-          </div>
+        <div>
+          <FeedBox />
         </div>
         <div style={{ flexGrow: 0.3 }} />
         <div className="rightWrapper">
