@@ -7,8 +7,8 @@ function Feed() {
   const [inputList, setInputList] = useState([]);
   const onChange = event => {
     setInput(event.target.value);
-    console.log(event.target.value);
-    console.log(inputList);
+    // console.log(event.target.value);
+    // console.log(inputList);
   };
   const onClick = () => {
     // const inputObject = () => {
@@ -29,7 +29,7 @@ function Feed() {
       },
     ]);
     setInput('');
-    console.log(inputList);
+    // console.log(inputList);
   };
 
   useEffect(() => {

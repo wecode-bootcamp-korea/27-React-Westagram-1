@@ -7,9 +7,7 @@ function LoginTaeyoung() {
   const [newInput, setnewInput] = useState({
     idValue: '',
     pwValue: '',
-    // buttonColor: '',
   });
-  console.log(newInput);
   //=================================================================
   //사용자 입력 값 불러오기
   const handleIdInput = e => {
@@ -24,9 +22,6 @@ function LoginTaeyoung() {
   //로그인 버튼 활성화
   const { idValue, pwValue } = newInput; // 비구조화를 통해서 state의 각 key의 value를 html태그에서 알 수 있도록 해주어야 해당 값을 사용할 수 있다.
   const colorChange = idValue.includes('@') && pwValue.length > 4; //q버튼의 색상 변경을 위한 변수 => true && false 값을 반환
-  // console.log(idValue.includes('@'));
-  // console.log(pwValue.length >= 5);
-  // console.log(idValue.includes('@') && pwValue.length > 4);
 
   //=================================================================
 
