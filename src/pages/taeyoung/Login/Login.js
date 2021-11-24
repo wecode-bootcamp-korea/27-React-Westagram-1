@@ -4,18 +4,12 @@ import React, { useState } from 'react';
 import './Login.scss';
 
 function LoginTaeyoung() {
-  //=================================================================
-  //메인페이지로 이동 버튼 기능
-  // const navigate = useNavigate();
-  // const goToMain = () => {
-  //   navigate("/main-taeyoung");
-  //=================================================================
   const [newInput, setnewInput] = useState({
     idValue: '',
     pwValue: '',
-    buttonColor: '',
+    // buttonColor: '',
   });
-  // console.log(newInput);
+  console.log(newInput);
   //=================================================================
   //사용자 입력 값 불러오기
   const handleIdInput = e => {
@@ -35,6 +29,18 @@ function LoginTaeyoung() {
   // console.log(idValue.includes('@') && pwValue.length > 4);
 
   //=================================================================
+
+  const goToMain = () => {
+    fetch('http://10.58.4.142:8000/users/signup', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: idValue,
+        password: pwValue,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => console.log('결과: ', result));
+  };
 
   return (
     <main className="login">
@@ -60,7 +66,8 @@ function LoginTaeyoung() {
             className="button"
             disabled={!(idValue.includes('@') && pwValue.length > 4)}
             style={{ background: colorChange ? '#0095f6' : '#c0dffd' }} //로그인 활성 비활성에 따라 로그인 색생 변경
-            // onClick={goToMain}
+            onClick={goToMain}
+            type="button"
           >
             로그인
           </button>
