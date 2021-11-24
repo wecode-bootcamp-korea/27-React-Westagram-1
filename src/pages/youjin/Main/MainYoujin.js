@@ -13,6 +13,7 @@ function MainYoujin() {
       </header>
       <main>
         <FeedsYoujin />
+        <FeedsYoujin />
         <MainRightYoujin />
       </main>
     </div>

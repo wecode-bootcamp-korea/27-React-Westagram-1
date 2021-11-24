@@ -22,15 +22,25 @@ function LoginFormYoujin() {
       ? setBooleanBtn(true)
       : setBooleanBtn(false);
   };
-
   const navigate = useNavigate();
 
-  const goToMain = () => {
-    if (booleanBtn) {
-      navigate('/main-youjin');
-    } else {
-      alert('id와 password를 다시 입력해주세요.');
-    }
+  const goToMain = event => {
+    event.preventDefault();
+    fetch('http://10.58.3.112:8000/users/signin', {
+      method: 'POST',
+      body: JSON.stringify({
+        name: 'kuyoujin',
+        email: isValue.idValue,
+        password: isValue.passwordValue,
+        phone: '01048020445',
+      }),
+    }) // 예시코드에서는 이해를 돕기 위해 명시적으로 기입해뒀습니다.
+      .then(response => response.json())
+      .then(result =>
+        result.Token
+          ? navigate('/main-youjin')
+          : alert('id와 password를 다시 입력해주세요.')
+      );
   };
   return (
     <div className="loginFormYoujin">

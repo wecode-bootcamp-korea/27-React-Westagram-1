@@ -1,21 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './FeedsYoujin.scss';
 import CommentYoujin from './CommentYoujin';
 
 function FeedsYoujin() {
   const [inputText, setInputText] = useState('');
-  const [checkBtn, setCheckBtn] = useState(false); //
+  const [checkBtn, setCheckBtn] = useState(false);
   const [comments, setComments] = useState([]);
-
-  // useEffect(() => {
-  //   fetch('http://localhost:3000/data/commentData.json', {
-  //     method: 'GET', // GET method는 기본값이라서 생략이 가능합니다.
-  //   }) // 예시코드에서는 이해를 돕기 위해 명시적으로 기입해뒀습니다.
-  //     .then(res => res.json())
-  //     .then(data => {
-  //       setInputText(data);
-  //     });
-  // }, []);
 
   const handleChange = event => {
     setInputText(event.target.value);
@@ -39,6 +29,13 @@ function FeedsYoujin() {
   const checkInput = () => {
     inputText.length ? setCheckBtn(true) : setCheckBtn(false);
   };
+  useEffect(() => {
+    fetch('http://localhost:3000/data/commentData.json', {
+      method: 'GET', // GET method는 기본값이라서 생략이 가능합니다.
+    }) // 예시코드에서는 이해를 돕기 위해 명시적으로 기입해뒀습니다.
+      .then(response => response.json())
+      .then(data => setComments(data));
+  }, []);
 
   return (
     <div className="feedsYoujin">
@@ -73,8 +70,12 @@ function FeedsYoujin() {
               <span className="writeId">sodalite.1204</span>
               <span className="writeContent">hello</span>
             </li>
-            {comments.map((item, i) => (
-              <CommentYoujin item={item} key={i} />
+            {comments.map(comment => (
+              <CommentYoujin
+                key={comment.id}
+                name={comment.userName}
+                comment={comment.content}
+              />
             ))}
           </ul>
         </div>
