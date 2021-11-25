@@ -14,9 +14,10 @@ function FeedsContainer() {
     if (comment === '') {
       return;
     }
-    setCommentArray(commentValueList => [comment, ...commentValueList]);
+    setCommentArray(e => [comment, ...e]);
     setComment('');
   };
+
   return (
     <main className="feedsContainer">
       <article className="feed">
