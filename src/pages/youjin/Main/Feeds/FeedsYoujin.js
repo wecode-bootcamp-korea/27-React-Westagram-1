@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './FeedsYoujin.scss';
 import CommentYoujin from './CommentYoujin';
 
-function FeedsYoujin() {
+function FeedsYoujin({ key, name, content, feedImage, comment }) {
   const [inputText, setInputText] = useState('');
   const [checkBtn, setCheckBtn] = useState(false);
   const [comments, setComments] = useState([]);
@@ -43,12 +43,14 @@ function FeedsYoujin() {
         <div className="profileBox">
           <div className="profileAndId">
             <img src="images/youjin/knitting_img.jpeg" alt="프로필작은사진" />
-            <p className="myId">what_are_u</p>
+            <p className="myId" key={key}>
+              {name}
+            </p>
           </div>
           <i className="fas fa-ellipsis-h" />
         </div>
         <div className="imageBox">
-          <img src="images/youjin/cafe_img.jpeg" alt="프로필이미지" />
+          <img src={feedImage} alt="프로필이미지" />
         </div>
         <div className="estimateBox">
           <div className="commentBtnBar">
@@ -67,8 +69,8 @@ function FeedsYoujin() {
         <div className="commentBox">
           <ul className="commentList">
             <li className="commentResult">
-              <span className="writeId">sodalite.1204</span>
-              <span className="writeContent">hello</span>
+              <span className="writeId">{name}</span>
+              <span className="writeContent">{content}</span>
             </li>
             {comments.map(comment => (
               <CommentYoujin

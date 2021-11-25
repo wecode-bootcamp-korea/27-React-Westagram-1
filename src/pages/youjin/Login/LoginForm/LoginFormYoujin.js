@@ -32,7 +32,7 @@ function LoginFormYoujin() {
         name: 'kuyoujin',
         email: isValue.idValue,
         password: isValue.passwordValue,
-        phone: '01048020445',
+        phone: '01012341234',
       }),
     }) // 예시코드에서는 이해를 돕기 위해 명시적으로 기입해뒀습니다.
       .then(response => response.json())
@@ -50,7 +50,6 @@ function LoginFormYoujin() {
           id="id1"
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
-          // onChange={handleIdInput}
           name="idValue"
         />
         <input
@@ -58,7 +57,6 @@ function LoginFormYoujin() {
           id="password1"
           type="password"
           placeholder="비밀번호"
-          // onChange={handleIdInput}
           name="passwordValue"
         />
         <div className="loginBtnYoujin">

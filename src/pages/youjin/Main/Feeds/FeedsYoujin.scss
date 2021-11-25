@@ -33,8 +33,8 @@
     .estimateBox {
       @include flexBetween;
       width: 100%;
-      font-size: 25px;
       padding: 5px 10px;
+      font-size: 25px;
       .commentBtnBar {
         @include flexBetween;
         width: 20%;
@@ -57,21 +57,20 @@
       margin: 5px 10px;
       img {
         width: 5%;
-        border-radius: 50%;
         margin-right: 10px;
+        border-radius: 50%;
       }
     }
     .commentBox {
       width: 100%;
       ul {
-        list-style: none;
         text-align: left;
+        list-style: none;
         li {
           display: flex;
           justify-content: flex-start;
           align-items: center;
           margin: 5px 10px;
-
           .writeId {
             padding-right: 5px;
             font-weight: 600;
@@ -88,25 +87,25 @@
     background-color: #fff;
     input {
       width: 100%;
-      border: none;
       padding: 10px 10px;
+      border: none;
       outline: none;
     }
     .buttonOn {
       width: 10%;
-      border: none;
-      background-color: #fff;
-      color: #0095f6;
-      font-weight: 600;
       padding: 5px 10px;
+      border: none;
+      color: #0095f6;
+      background-color: #fff;
+      font-weight: 600;
     }
     .buttonOff {
       width: 10%;
-      border: none;
-      background-color: #fff;
-      color: #c5e1fa;
-      font-weight: 600;
       padding: 5px 10px;
+      border: none;
+      color: #c5e1fa;
+      background-color: #fff;
+      font-weight: 600;
     }
   }
 }
