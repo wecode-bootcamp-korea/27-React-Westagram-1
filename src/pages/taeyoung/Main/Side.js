@@ -1,5 +1,5 @@
 import React from 'react';
-import SideUser from './SideUser';
+import SideUser from './SideUserMeta';
 import './Side.scss';
 
 function Side() {
@@ -29,10 +29,6 @@ function Side() {
         <button className="moreBt">모두 보기</button>
       </div>
 
-      <SideUser />
-      <SideUser />
-      <SideUser />
-      <SideUser />
       <SideUser />
     </aside>
   );

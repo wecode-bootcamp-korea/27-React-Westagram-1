@@ -1,17 +1,22 @@
 [
   {
-    "id": 1,
-    "userName": "lee",
-    "content": "Welcome to world best coding bootcamp!"
+    "key": 1,
+    "userName": "han",
+    "content": "Welcome!"
   },
   {
-    "id": 2,
+    "key": 2,
     "userName": "kim",
-    "content": "Hi there"
+    "content": "Hi I'm dum"
   },
   {
-    "id": 3,
-    "userName": "pak",
-    "content": "good!"
+    "key": 3,
+    "userName": "mamau",
+    "content": "oh! god :("
+  },
+  {
+    "key": 4,
+    "userName": "lala",
+    "content": "bad!"
   }
 ]

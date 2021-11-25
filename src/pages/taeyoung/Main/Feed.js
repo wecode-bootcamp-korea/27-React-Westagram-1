@@ -2,43 +2,34 @@ import React, { useState, useEffect } from 'react';
 import Comment from './Comment';
 import './Feed.scss';
 
-function Feed() {
+function Feed({ src, id, userName, likePeople }) {
   const [input, setInput] = useState('');
   const [inputList, setInputList] = useState([]);
+
   const onChange = event => {
     setInput(event.target.value);
-    // console.log(event.target.value);
-    // console.log(inputList);
   };
+
   const onClick = () => {
-    // const inputObject = () => {
-    //   [{
-    //     "id": inputList.length - 1,
-    //     "userName": "이름이양",
-    //     "content": input,
-    //   }]
-    // }
-    // inputList.push(input);
-    // **** state를 직접적으로 수정할 수 없기 때문에(정확히는 권장 되지 않기 때문에) 이렇게 작성하면 안되고 아래와 같이 작성! ****
     setInputList(element => [
       ...element,
       {
         id: inputList.length + 1,
-        userName: 'ladasd',
+        userName: '이름',
         content: input,
       },
     ]);
     setInput('');
-    // console.log(inputList);
   };
 
   useEffect(() => {
-    fetch('http://localhost:3000/data/commentData.json', {
+    fetch('/data/commentData.json', {
+      // http://localhost:3000 해당부분(로컬호스트)는 생략가능- 로컬호스트 번호가 바뀔 때마다 자동으로 로컬호스트를 잡아주기 때문에 오류발생을 막을 수 있다.
       method: 'GET',
     })
       .then(res => res.json())
-      .then(data => {
-        setInputList(data);
+      .then(commentData => {
+        setInputList(commentData);
       });
   }, []);
 
@@ -57,7 +48,7 @@ function Feed() {
 
         <div className="feedImg">
           <div className="feedContents">
-            <img src="/taeyoung/images/feedImg.png" alt="img" />
+            <img src={src} key={id} alt="img" />
           </div>
         </div>
         <div className="feedBottom">
@@ -76,7 +67,9 @@ function Feed() {
             <div className="feedUserImg">
               <img src="/taeyoung/images/userImg1.jpg" alt="img" />
             </div>
-            <span>sisnanaad님 외 101명이 좋아합니다.</span>
+            <span>
+              {userName}님 외 {likePeople}명이 좋아합니다.
+            </span>
           </div>
           <div className="feedComment">
             <div className="feedCommentLeft">
@@ -107,7 +100,6 @@ function Feed() {
       <form
         className="reCommnet"
         action="/create_process"
-        method="post"
         onSubmit={e => {
           e.preventDefault();
         }}
