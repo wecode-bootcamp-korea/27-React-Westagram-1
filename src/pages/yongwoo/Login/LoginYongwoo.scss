@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import '../../../styles/variables.scss';
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  @include flexCenter;
+  height: 100vh;
+}
+
+.loginYongwoo {
+  @include flex-column-center;
+  width: 350px;
+
+  .topWrap {
+    @include flex-column-center;
+    width: 348px;
+    border: 1px solid $color-outline;
+    background-color: #ffffff;
+
+    .logo {
+      padding: 40px 0;
+      font-family: 'Lobster', cursive;
+      font-size: 45px;
+    }
+
+    .meddleLine {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 266px;
+      color: #8e8e8e;
+      font-size: 13px;
+      font-weight: 600;
+
+      .line {
+        width: 103px;
+        height: 1px;
+        border-bottom: 1px solid $color-outline;
+      }
+    }
+
+    .facebookWrap p {
+      padding-top: 20px;
+      color: #385185;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .passwordLost {
+      padding: 20px 0;
+      color: #00376b;
+      font-size: 12px;
+    }
+  }
+  .signUpWrap {
+    @include flexCenter;
+    width: 348px;
+    height: 60px;
+    margin-top: 20px;
+    border: 1px solid $color-outline;
+    background-color: #ffffff;
+    font-size: 14px;
+
+    .signUpBlue {
+      color: #0095f6;
+      background: none;
+      border: none;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  .downlodeCopyright {
+    margin: 20px 0;
+    font-size: 14px;
+  }
+}

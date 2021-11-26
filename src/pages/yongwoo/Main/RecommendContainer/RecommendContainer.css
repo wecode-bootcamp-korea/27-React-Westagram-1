@@ -1,0 +1,163 @@
+.recommendContainer .mainRight {
+  width: 293px;
+  height: 460px;
+}
+
+.recommendContainer .mainRight .myInfoWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.recommendContainer .mainRight .myInfoWrap .myInfoPhotoWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.recommendContainer .mainRight .myInfoWrap .myInfoPhotoWrap img {
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  background-color: black;
+}
+
+.recommendContainer .mainRight .myInfoWrap .myInfoPhotoWrap .myInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 18px;
+}
+
+.recommendContainer .mainRight .myInfoWrap .myInfoPhotoWrap .myInfo h2 {
+  font-size: 14px;
+}
+
+.recommendContainer .mainRight .myInfoWrap .myInfoPhotoWrap .myInfo p {
+  margin-top: 2px;
+  color: #8e8e8e;
+  font-size: 14px;
+}
+
+.recommendContainer .mainRight .myInfoWrap .infoBlue {
+  color: #0095f6;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.recommendContainer .mainRight .recommendTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 30px;
+}
+
+.recommendContainer .mainRight .recommendTitle .grayColor {
+  color: #8e8e8e;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.recommendContainer .mainRight .recommendTitle .blackColor {
+  color: #262626;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.recommendContainer .recommendWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 16px;
+}
+
+.recommendContainer .recommendWrap .recommend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.recommendContainer .recommendWrap .recommend .recommendPhoto {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #dbdbdb;
+  border-radius: 16px;
+}
+
+.recommendContainer .recommendWrap .recommendText {
+  margin-left: 13px;
+}
+
+.recommendContainer .recommendWrap .recommendText h4 {
+  color: #262626;
+  font-size: 14px;
+}
+
+.recommendContainer .recommendWrap .recommendText p {
+  margin-top: 3px;
+  color: #8e8e8e;
+  font-size: 12px;
+}
+
+.recommendContainer .recommendWrap .follow {
+  color: #0095f6;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.recommendContainer .recommendWrap .information .informatioinList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 37px;
+  color: #c7c7c7;
+  font-size: 11px;
+}
+
+.recommendContainer .recommendWrap .information .informatioinList li {
+  padding-right: 8px;
+  line-height: 17px;
+  list-style: none;
+}
+
+.recommendContainer .recommendWrap .information p {
+  margin-top: 25px;
+  color: #c7c7c7;
+  font-size: 11px;
+  font-weight: 400;
+}
+/*# sourceMappingURL=RecommendContainer.css.map */

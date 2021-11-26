@@ -1,0 +1,158 @@
+body {
+  padding-top: 40px;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 300px;
+}
+
+.feedsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  margin-right: 50px;
+}
+
+.feedsContainer .feed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 614px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+}
+
+.feedsContainer .feed .photoWrap {
+  width: 612px;
+}
+
+.feedsContainer .feed .photoWrap img {
+  width: 100%;
+}
+
+.feedsContainer .feed .goodWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 570px;
+  margin: 0 auto;
+}
+
+.feedsContainer .feed .goodWrap p {
+  margin-left: 5px;
+  padding: 10px 0;
+  color: #262626;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.feedsContainer .feed .goodWrap .goodImg {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+i.fas.fa-heart.redHeart {
+  display: inline-block;
+}
+
+i.fas.fa-heart.blackHeart {
+  display: inline-block;
+}
+
+.comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comment .commentNameBold {
+  font-weight: bold;
+}
+
+.comment span.commentText {
+  font-weight: normal;
+}
+
+.comment .heart {
+  width: 15px;
+  cursor: pointer;
+}
+
+.comment .heartColor {
+  display: none;
+  width: 15px;
+  cursor: pointer;
+}
+
+.commentStart i {
+  font-size: 15px;
+}
+
+.commentStart i .fa-trash-alt {
+  display: none;
+  color: gray;
+  cursor: pointer;
+}
+
+.commentStart i .fa-heart {
+  display: none;
+  cursor: pointer;
+}
+
+.commentStart i .colorHeart {
+  display: none;
+  color: #f44336;
+  cursor: pointer;
+}
+
+.information .informatioinList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 37px;
+  color: #c7c7c7;
+  font-size: 11px;
+}
+
+.information .informatioinList li {
+  padding-right: 8px;
+  line-height: 17px;
+  list-style: none;
+}
+
+.information p {
+  margin-top: 25px;
+  color: #c7c7c7;
+  font-size: 11px;
+  font-weight: 400;
+}
+/*# sourceMappingURL=MainYongwoo.css.map */

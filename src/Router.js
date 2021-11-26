@@ -1,20 +1,20 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // 인웅's 컴포넌트
-import MainInwoong from "./pages/inwoong/Main/Main";
-import LoginInwoong from "./pages/inwoong/Login/Login";
+import MainInwoong from './pages/inwoong/Main/Main';
+import LoginInwoong from './pages/inwoong/Login/Login';
 // 태양's 컴포넌트
-import LoginTaeyoung from "./pages/taeyoung/Login/Login";
-import MainTaeyoung from "./pages/taeyoung/Main/Main";
+import LoginTaeyoung from './pages/taeyoung/Login/Login';
+import MainTaeyoung from './pages/taeyoung/Main/Main';
 
 // 용우's 컴포넌트
-import LoginYongwoo from "./pages/yongwoo/Login/Login";
-import MainYongwoo from "./pages/yongwoo/Main/Main";
+import LoginYongwoo from './pages/yongwoo/Login/LoginYongwoo';
+import MainYongwoo from './pages/yongwoo/Main/MainYongwoo';
 
 // 유진's 컴포넌트
-import LoginYoujin from "./pages/youjin/Login/Login";
-import MainYoujin from "./pages/youjin/Main/Main";
+import LoginYoujin from './pages/youjin/Login/Login';
+import MainYoujin from './pages/youjin/Main/Main';
 
 function Router() {
   return (
