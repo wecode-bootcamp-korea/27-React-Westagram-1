@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Comment from '../Comment/Comment';
 import './FeedsContainer.scss';
 
 function FeedsContainer() {
   const [comment, setComment] = useState('');
   const [commentArray, setCommentArray] = useState([]);
+  const [commentList, setCommentList] = useState([]);
   const onChange = event => {
     const { value } = event.target;
     setComment(value);
@@ -18,6 +19,15 @@ function FeedsContainer() {
     setComment('');
   };
 
+  useEffect(() => {
+    fetch(`data/commentList.json`, {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        setCommentList(data);
+      });
+  }, []);
   return (
     <main className="feedsContainer">
       <article className="feed">
@@ -59,19 +69,22 @@ function FeedsContainer() {
           <p className="text">
             #모동숲 #모여봐요동물의숲 #박새로이머리 #오징어 #낚시
           </p>
-          <ul className="comment">
-            <li className="commentText">
-              <div className="commentMargin">
-                <span className="commentNameBold">jeffkim01</span>
-                진짜 세상 부럽다... 저도 동숲...
-              </div>
-              <div className="commentStart">
-                <i className="far fa-trash-alt" />
-                {/* <i className="far fa-heart" /> */}
-                <i className="fas fa-heart colorHeart" />
-              </div>
-            </li>
-          </ul>
+          {commentList.map(user => {
+            return (
+              <ul className="comment" key={user.id}>
+                <li className="commentText">
+                  <div className="commentName">
+                    <span className="commentNameBold">{user.name}</span>
+                    {user.comment}
+                  </div>
+                  <div className="commentStart">
+                    <i className="far fa-trash-alt" />
+                    <i className="fas fa-heart colorHeart" />
+                  </div>
+                </li>
+              </ul>
+            );
+          })}
           <Comment commentArray={commentArray} />
           <p className="commentView">54분전</p>
         </div>

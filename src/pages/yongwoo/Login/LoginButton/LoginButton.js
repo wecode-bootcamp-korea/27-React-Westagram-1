@@ -11,16 +11,16 @@ function LoginButton(props) {
 
   const navigate = useNavigate();
   const goToMain = () => {
-    // fetch('http://10.58.6.93:8000/users/signin', {
-    //   method: 'POST',
-    //   body: JSON.stringify({
-    //     email: id,
-    //     password: pw,
-    //   }),
-    // })
-    //   .then(response => response.json())
-    // .then(result => console.log('결과: ', result))
-    // .then();
+    //   fetch('http://10.58.5.25:8000/users/signin/', {
+    //     method: 'POST',
+    //     body: JSON.stringify({
+    //       email: 'komhgogo@gmail.com',
+    //       password: 'Rhalsgur1@',
+    //     }),
+    //   })
+    //     .then(response => response.json())
+    //     .then(result => console.log('결과: ', result))
+    //     .then();
     navigate('/main-yongwoo');
   };
 
