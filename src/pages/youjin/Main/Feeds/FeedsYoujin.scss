@@ -1,0 +1,132 @@
+@import '../../../../styles/variables.scss';
+
+.feedsYoujin {
+  .articleBox {
+    width: 40%;
+    margin: 80px 0 10px 250px;
+    border: 1px solid $color-outline;
+
+    .profileBox {
+      @include flexBetween;
+      border-bottom: 1px solid $color-outline;
+      background-color: #fff;
+
+      .profileAndId {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        img {
+          width: 8%;
+          border-radius: 50%;
+          margin: 10px;
+        }
+
+        .myId {
+          font-size: 20px;
+        }
+      }
+
+      .fas {
+        margin-right: 15px;
+      }
+    }
+
+    .imageBox {
+      img {
+        width: 100%;
+      }
+    }
+
+    .estimateBox {
+      @include flexBetween;
+      width: 100%;
+      padding: 5px 10px;
+      font-size: 25px;
+
+      .commentBtnBar {
+        @include flexBetween;
+        width: 20%;
+
+        i {
+          .far {
+            .fa {
+              margin: 5px;
+              font-size: 20px;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    .howManyLikes {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      margin: 5px 10px;
+
+      img {
+        width: 5%;
+        margin-right: 10px;
+        border-radius: 50%;
+      }
+    }
+
+    .commentBox {
+      width: 100%;
+
+      ul {
+        text-align: left;
+        list-style: none;
+
+        li {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin: 5px 10px;
+
+          .writeId {
+            padding-right: 5px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  .beforeFewMin {
+    padding: 5px 10px;
+  }
+
+  .addComment {
+    @include flexBetween;
+    background-color: #fff;
+
+    input {
+      width: 100%;
+      padding: 10px 10px;
+      border: none;
+      outline: none;
+    }
+
+    .buttonOn {
+      width: 10%;
+      padding: 5px 10px;
+      border: none;
+      color: #0095f6;
+      background-color: #fff;
+      font-weight: 600;
+    }
+
+    .buttonOff {
+      width: 10%;
+      padding: 5px 10px;
+      border: none;
+      color: #c5e1fa;
+      background-color: #fff;
+      font-weight: 600;
+    }
+  }
+}
