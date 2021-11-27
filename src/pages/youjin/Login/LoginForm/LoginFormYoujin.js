@@ -7,7 +7,6 @@ function LoginFormYoujin() {
     idValue: '',
     passwordValue: '',
   });
-  const [booleanBtn, setBooleanBtn] = useState(false);
 
   const handleIdInput = event => {
     const { name, value } = event.target;
@@ -17,24 +16,24 @@ function LoginFormYoujin() {
     });
   };
 
-  const passLogin = () => {
-    isValue.idValue.includes('@') && isValue.passwordValue.length > 4
-      ? setBooleanBtn(true)
-      : setBooleanBtn(false);
-  };
+  const passLogin =
+    isValue.idValue.includes('@') && isValue.passwordValue.length > 4;
+
   const navigate = useNavigate();
 
   const goToMain = event => {
     event.preventDefault();
-    fetch('http://10.58.3.112:8000/users/signin', {
+    fetch('http://10.58.5.25:8000/postings/', {
       method: 'POST',
+      header: JSON.stringify({ Authorization: '' }),
       body: JSON.stringify({
-        name: 'kuyoujin',
-        email: isValue.idValue,
-        password: isValue.passwordValue,
-        phone: '01012341234',
+        title: '2번째 게시글',
+        // name: 'kuyoujin',
+        // email: isValue.idValue,
+        // password: isValue.passwordValue,
+        // phone: '01012341234',
       }),
-    }) // 예시코드에서는 이해를 돕기 위해 명시적으로 기입해뒀습니다.
+    })
       .then(response => response.json())
       .then(result =>
         result.Token
@@ -42,9 +41,10 @@ function LoginFormYoujin() {
           : alert('id와 password를 다시 입력해주세요.')
       );
   };
+
   return (
     <div className="loginFormYoujin">
-      <form onKeyUp={passLogin} onChange={handleIdInput}>
+      <form className="loginForm" onKeyUp={passLogin} onChange={handleIdInput}>
         <input
           className="inputBox"
           id="id1"
@@ -61,9 +61,9 @@ function LoginFormYoujin() {
         />
         <div className="loginBtnYoujin">
           <button
-            className={booleanBtn ? 'afterButton' : 'beforeButton'}
+            className={!passLogin ? 'beforeButton' : 'afterButton'}
             onClick={goToMain}
-            disabled={booleanBtn ? false : true}
+            disabled={!passLogin}
           >
             로그인
           </button>

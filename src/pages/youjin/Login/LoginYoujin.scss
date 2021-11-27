@@ -3,18 +3,23 @@
 .loginYoujin {
   @include flexCenter;
   height: 100vh;
-  article {
+
+  .logoArticle {
     @include flexCenter;
-    width: 30%;
+    padding: 30px;
     border: 1px solid $color-outline;
+
     .logo {
       text-align: center;
-      p {
+
+      .logoName {
         @include logoText;
         margin: 30px;
       }
+
       .findPw {
         margin: 50px;
+
         .findPwText {
           color: #124373;
           text-decoration: none;

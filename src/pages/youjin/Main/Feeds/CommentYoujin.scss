@@ -1,9 +1,12 @@
 @import '../../../../styles/variables.scss';
+
 .commentBox {
   width: 100%;
+
   ul {
     list-style: none;
     text-align: left;
+
     li {
       display: flex;
       justify-content: flex-start;

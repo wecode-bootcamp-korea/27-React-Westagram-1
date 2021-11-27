@@ -1,14 +1,14 @@
 import React from 'react';
-import './LoginYoujin.scss';
-import LoginForm from './LoginForm/LoginFormYoujin';
 import { Link } from 'react-router-dom';
+import LoginForm from './LoginForm/LoginFormYoujin';
+import './LoginYoujin.scss';
 
 function LoginYoujin() {
   return (
     <div className="loginYoujin">
-      <article>
+      <article className="logoArticle">
         <div className="logo">
-          <p>westagram</p>
+          <p className="logoName">westagram</p>
           <LoginForm />
           <div className="findPw">
             <Link to="/main-youjin" className="findPwText">

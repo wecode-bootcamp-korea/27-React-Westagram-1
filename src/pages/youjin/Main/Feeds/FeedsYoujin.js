@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import './FeedsYoujin.scss';
 import CommentYoujin from './CommentYoujin';
+import './FeedsYoujin.scss';
 
 function FeedsYoujin({ key, name, content, feedImage, comment }) {
   const [inputText, setInputText] = useState('');
-  const [checkBtn, setCheckBtn] = useState(false);
   const [comments, setComments] = useState([]);
+  // const [checkBtn, setCheckBtn] = useState(false);
 
   const handleChange = event => {
     setInputText(event.target.value);
@@ -23,16 +23,15 @@ function FeedsYoujin({ key, name, content, feedImage, comment }) {
     event.preventDefault();
     setComments([...comments, inputText]);
     setInputText('');
-    setCheckBtn(false);
+    // setCheckBtn(false);
   };
 
-  const checkInput = () => {
-    inputText.length ? setCheckBtn(true) : setCheckBtn(false);
-  };
+  const checkInput = inputText.value;
+
   useEffect(() => {
     fetch('http://localhost:3000/data/commentData.json', {
-      method: 'GET', // GET method는 기본값이라서 생략이 가능합니다.
-    }) // 예시코드에서는 이해를 돕기 위해 명시적으로 기입해뒀습니다.
+      method: 'GET',
+    })
       .then(response => response.json())
       .then(data => setComments(data));
   }, []);
@@ -92,9 +91,9 @@ function FeedsYoujin({ key, name, content, feedImage, comment }) {
             onKeyUp={checkInput}
           />
           <button
-            className={checkBtn ? 'buttonOn' : 'buttonOff'}
+            className={!inputText ? 'buttonOff' : 'buttonOn'}
             type="submit"
-            disabled={checkBtn ? false : true}
+            disabled={!inputText}
           >
             게시
           </button>
