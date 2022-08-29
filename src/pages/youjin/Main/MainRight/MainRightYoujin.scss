@@ -1,0 +1,148 @@
+@import '../../../../styles/variables.scss';
+
+.mainRightYoujin {
+  position: fixed;
+  right: 270px;
+  top: 80px;
+
+  .sideContainer {
+    width: 300px;
+    margin-left: 30px;
+
+    .showMyId {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      img {
+        width: 60px;
+        border-radius: 60px;
+      }
+
+      div {
+        margin-left: 10px;
+
+        h1 {
+          font-size: 20px;
+          font-weight: 400;
+        }
+
+        h2 {
+          font-size: 15px;
+          color: #999;
+          font-weight: 300;
+        }
+      }
+    }
+
+    .storyContainer {
+      width: 330px;
+      height: 250px;
+      margin-top: 20px;
+      border: 1px solid $color-outline;
+      background-color: #fff;
+
+      .storyBar {
+        @include flexBetween;
+        margin: 20px;
+        font-size: 15px;
+
+        .storyName {
+          font-size: 15px;
+          color: #7c7c7c;
+        }
+
+        a {
+          font-size: 15px;
+          color: #000;
+          text-decoration: none;
+        }
+      }
+
+      .stroyAccount {
+        width: 100%;
+
+        ul {
+          list-style: none;
+
+          li {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 20px;
+
+            img {
+              width: 60px;
+              margin-right: 10px;
+              border-radius: 60px;
+            }
+            #ubloadTime {
+              color: #7c7c7c;
+            }
+          }
+        }
+      }
+    }
+
+    .addFriendContainer {
+      margin-top: 20px;
+      width: 330px;
+      height: 250px;
+      border: 1px solid $color-outline;
+      background-color: #fff;
+
+      .addFriendBar {
+        @include flexBetween;
+        font-size: 15px;
+        margin: 20px;
+
+        .addFriendName {
+          font-size: 15px;
+          color: #7c7c7c;
+        }
+
+        a {
+          color: #000;
+          font-size: 15px;
+          text-decoration: none;
+        }
+      }
+
+      .addFriendBox {
+        .addFriendAccount {
+          width: 100%;
+          ul {
+            list-style: none;
+            li {
+              @include flexBetween;
+              margin: 20px;
+
+              .photoAndId {
+                img {
+                  width: 60px;
+                  border-radius: 60px;
+                  margin-right: 10px;
+                }
+              }
+
+              .photoAndId {
+                #howManyAddFriend {
+                  color: #7c7c7c;
+                  width: 60%;
+                }
+              }
+
+              #addFollow {
+                width: 70%;
+                color: #4193ef;
+                font-size: 15px;
+                text-align: right;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
