@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LoginFormYoujin.scss';
 
@@ -7,6 +7,7 @@ function LoginFormYoujin() {
     idValue: '',
     passwordValue: '',
   });
+  const [count, setCount] = useState(0);
 
   const handleIdInput = event => {
     const { name, value } = event.target;
@@ -20,6 +21,7 @@ function LoginFormYoujin() {
     isValue.idValue.includes('@') && isValue.passwordValue.length > 4;
 
   const navigate = useNavigate();
+  const test1 = 1;
 
   const goToMain = event => {
     event.preventDefault();
@@ -42,6 +44,22 @@ function LoginFormYoujin() {
       );
   };
 
+  useEffect(
+    () =>
+      fetch(`http://10.58.5.25:8000/postings/${count}`, {
+        method: 'POST',
+        header: JSON.stringify({ Authorization: '' }),
+        body: JSON.stringify({
+          title: '2번째 게시글',
+          // name: 'kuyoujin',
+          // email: isValue.idValue,
+          // password: isValue.passwordValue,
+          // phone: '01012341234',
+        }),
+      }),
+    []
+  );
+
   return (
     <div className="loginFormYoujin">
       <form className="loginForm" onKeyUp={passLogin} onChange={handleIdInput}>
@@ -60,6 +78,7 @@ function LoginFormYoujin() {
           name="passwordValue"
         />
         <div className="loginBtnYoujin">
+          <p onClick={() => setCount(prev => prev + 1)}>test</p>
           <button
             className={!passLogin ? 'beforeButton' : 'afterButton'}
             onClick={goToMain}
